@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belastingaangifte Calculator - Vak V</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ...gebruik dezelfde CSS als vak4.html... */
+        body {
+            margin: 0;
+            background: #f4f8fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #1a237e;
+        }
+        .sos-tax-banner {
+            background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 2.2rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+        }
+        .main-container {
+            max-width: 1000px;
+            margin: 2rem auto 2rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(21,101,192,0.10);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .info-banner {
+            background: #e3f2fd;
+            color: #1565c0;
+            border-left: 6px solid #1976d2;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+        nav {
+            margin-bottom: 1.5rem;
+        }
+        .nav-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.6em 1.2em;
+            margin: 0 0.3em 0.5em 0;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background: #1565c0;
+        }
+        .action-btn {
+            background: #42a5f5;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.7em 1.5em;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 8px rgba(66,165,245,0.08);
+            transition: background 0.2s;
+        }
+        .action-btn:hover {
+            background: #1976d2;
+        }
+        h1, h2, h3 {
+            color: #1565c0;
+            font-weight: 700;
+        }
+        .container {
+            background: #f8fafc;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #e3f2fd;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+        /* ...responsive styles zoals in vak4.html... */
+        @media (max-width: 900px) {
+            .main-container {
+                padding: 1rem 0.5rem;
+            }
+            .container {
+                padding: 1rem 0.5rem;
+            }
+            .container table {
+                font-size: 0.97em;
+            }
+        }
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 0.5rem 0.2rem;
+            }
+            .container {
+                padding: 0.5rem 0.2rem;
+            }
+            .sos-tax-banner {
+                font-size: 1.3rem;
+                padding: 1rem 0;
+            }
+            .container table, .container td, .container th {
+                font-size: 0.93em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sos-tax-banner">
+        SOS tax
+    </header>
+    <div class="main-container">
+        <div class="info-banner">
+            Dit is een simulator, die toelaat anoniem uw belastingsaanslag te berekenen. De gegevens worden niet bijgehouden en de aangifte kan niet ingediend worden.
+        </div>
+        <nav style="overflow-x:auto; white-space:nowrap; margin-bottom:2rem;">
+            <a href="index.html"><button class="nav-btn">Vak I</button></a>
+            <a href="vak2.html"><button class="nav-btn">Vak II</button></a>
+            <a href="vak3.html"><button class="nav-btn">Vak III</button></a>
+            <a href="vak4.html"><button class="nav-btn">Vak IV</button></a>
+            <button class="nav-btn active">Vak V</button>
+            <a href="vak6.html"><button class="nav-btn">Vak VI</button></a>
+        </nav>
+        
+        
+    <div id="bodyContent">
+        
+
+
+
+
+
+
+
+
+        <form name="cadreform" method="post" action="/taxcalc2024/app/anonymous/private/taxform/validateCadreV.do"><div><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="977953f2ada39a2f51785152f7be12be"></div>
+            <div class="container"><div style="margin-right: 2%;margin-left:2%;"><input type="hidden" name="redisplay" value="Cadre_V"><input type="hidden" name="cadreAnchor" value="cadreV"><input type="hidden" name="notesRelativeRubrique" value=""><table style="width:100%;"><thead><tr><th colspan="3"></th><th colspan="2" style="width:12%;"></th><th></th><th colspan="2" style="width:12%;"></th></tr></thead><tbody><tr><td colspan="8"><h2 class="title">Vak V - PENSIOENEN</h2></td></tr><tr><td colspan="8"><div id='errorcount'></div></td></tr><tr><td colspan="8"><hr class="fin-dark"/></td></tr>
+                
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr ><td style="padding-left:0px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" class="datetaxbox">A. PENSIOENEN</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr>
+            <td colspan="8">
+                <a id="counter3"></a>
+            </td>
+        </tr>
+        
+        <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=V&contentkey=application_help_0102_1#anchor_A_1');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>1.</b></td><td style="vertical-align:top;" ><b>Andere dan de onder 2 en 3 bedoelde pensioenen</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >Wettelijke pensioenen verkregen vanaf de wettelijke pensioenleeftijd:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c228b_1"><span style="color:#C60C08">228</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c228b_1" maxlength="11" value="" onblur="calculateTotal1228(this.form,3);" id="text_c228b_1" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2228" value=""/></td></tr><tr ><td colspan="2"></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c228b_2"><span style="color:#C60C08">228</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c228b_2" maxlength="11" value="" onblur="calculateTotal1228(this.form,3);" id="text_c228b_2" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2228" value=""/></td></tr><tr ><td colspan="2"></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c228b_3"><span style="color:#C60C08">228</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c228b_3" maxlength="11" value="" onblur="calculateTotal1228(this.form,3);" id="text_c228b_3" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2228" value=""/></td></tr>
+        <tr><td colspan="2"></td><td class="grey"></td><td colspan="2" style="text-align:center"><a href="javascript:submitForm(cadreform,'/taxcalc2024/app/anonymous/private/taxform/increaseCounter3CadreV.do?cadreAnchor=counter3')">Een lijn toevoegen</a></td><td class="grey"></td><td colspan="2"></td></tr>
+        <tr><td colspan="2"></td><td class="grey"></td><td colspan="2"><hr class="fin-dark" style="width: 95%"/></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">1)</td><td style="vertical-align:top;" >gewone:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1228"><b>1<span style="color:#C60C08">228</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1228" maxlength="11" value="" onfocus="calculateTotal1228(this.form,3);" readonly="readonly" id="text_c1228" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2228" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">2)</td><td style="vertical-align:top;" >pensioenen van december 2023 (overheid):</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1314"><b>1<span style="color:#C60C08">314</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1314" maxlength="11" value="" id="text_c1314" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2314" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">3)</td><td style="vertical-align:top;" >achterstallen:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1230"><b>1<span style="color:#C60C08">230</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1230" maxlength="11" value="" id="text_c1230" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2230" value=""/></td></tr>
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">b)</td><td style="vertical-align:top;" >Overlevingspensioenen en overgangsuitkeringen:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">1)</td><td style="vertical-align:top;" >gewone:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1229"><b>1<span style="color:#C60C08">229</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1229" maxlength="11" value="" id="text_c1229" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2229" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">2)</td><td style="vertical-align:top;" >pensioenen van december 2023 (overheid):</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1315"><b>1<span style="color:#C60C08">315</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1315" maxlength="11" value="" id="text_c1315" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2315" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">3)</td><td style="vertical-align:top;" >achterstallen:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1231"><b>1<span style="color:#C60C08">231</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1231" maxlength="11" value="" id="text_c1231" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2231" value=""/></td></tr>
+        
+        
+        
+        <tr>
+            <td colspan="8">
+                <a id="counter1"></a>
+            </td>
+        </tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">c)</td><td style="vertical-align:top;" >Andere pensioenen, renten (behalve omzettingsrenten) en als zodanig geldende kapitalen, afkoopwaarden, enz., die gezamenlijk belastbaar zijn:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c211b_1"><span style="color:#C60C08">211</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c211b_1" maxlength="11" value="" onblur="calculateTotal1211(this.form,3);" id="text_c211b_1" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2211" value=""/></td></tr><tr ><td colspan="2"></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c211b_2"><span style="color:#C60C08">211</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c211b_2" maxlength="11" value="" onblur="calculateTotal1211(this.form,3);" id="text_c211b_2" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2211" value=""/></td></tr><tr ><td colspan="2"></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c211b_3"><span style="color:#C60C08">211</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c211b_3" maxlength="11" value="" onblur="calculateTotal1211(this.form,3);" id="text_c211b_3" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2211" value=""/></td></tr>
+        <tr><td colspan="2"></td><td class="grey"></td><td colspan="2" style="text-align:center"><a href="javascript:submitForm(cadreform,'/taxcalc2024/app/anonymous/private/taxform/increaseCounter1CadreV.do?cadreAnchor=counter1')">Een lijn toevoegen</a></td><td class="grey"></td><td colspan="2"></td></tr>
+        <tr><td colspan="2"></td><td class="grey"></td><td colspan="2"><hr class="fin-dark" style="width: 95%"/></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">1)</td><td style="vertical-align:top;" >gewone:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1211"><b>1<span style="color:#C60C08">211</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1211" maxlength="11" value="" onfocus="calculateTotal1211(this.form,3);" readonly="readonly" id="text_c1211" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2211" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">2)</td><td style="vertical-align:top;" >pensioenen van december 2023 (overheid):</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1316"><b>1<span style="color:#C60C08">316</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1316" maxlength="11" value="" id="text_c1316" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2316" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">3)</td><td style="vertical-align:top;" >achterstallen:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1212"><b>1<span style="color:#C60C08">212</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1212" maxlength="11" value="" id="text_c1212" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2212" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">d)</td><td style="vertical-align:top;" >Kapitalen en afkoopwaarden die afzonderlijk belastbaar zijn:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">1)</td><td style="vertical-align:top;" >tegen 33 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1213"><b>1<span style="color:#C60C08">213</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1213" maxlength="11" value="" id="text_c1213" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2213" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">2)</td><td style="vertical-align:top;" >tegen 20 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1245"><b>1<span style="color:#C60C08">245</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1245" maxlength="11" value="" id="text_c1245" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2245" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">3)</td><td style="vertical-align:top;" >tegen 18 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1253"><b>1<span style="color:#C60C08">253</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1253" maxlength="11" value="" id="text_c1253" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2253" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">4)</td><td style="vertical-align:top;" >tegen 16,5 %:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:60px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" >a.&nbsp;gekapitaliseerde waarde van wettelijke pensioenen verkregen vanaf de wettelijke pensioenleeftijd:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1232"><b>1<span style="color:#C60C08">232</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1232" maxlength="11" value="" id="text_c1232" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2232" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:60px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" >b.&nbsp;gekapitaliseerde waarde van overlevingspensioenen:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1237"><b>1<span style="color:#C60C08">237</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1237" maxlength="11" value="" id="text_c1237" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2237" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:60px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" >c.&nbsp;andere:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1214"><b>1<span style="color:#C60C08">214</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1214" maxlength="11" value="" id="text_c1214" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2214" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">5)</td><td style="vertical-align:top;" >tegen 10 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1215"><b>1<span style="color:#C60C08">215</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1215" maxlength="11" value="" id="text_c1215" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2215" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">e)</td><td style="vertical-align:top;" >Omzettingsrenten van kapitalen en afkoopwaarden die zijn betaald of toegekend:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">1)</td><td style="vertical-align:top;" >in 2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1216"><b>1<span style="color:#C60C08">216</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1216" maxlength="11" value="" id="text_c1216" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2216" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">2)</td><td style="vertical-align:top;" >tijdens de jaren 2011 tot 2022:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1218"><b>1218</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1218" maxlength="11" value="" id="text_c1218" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2218" value=""/></td></tr>
+        
+        
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=V&contentkey=application_help_0102_1#anchor_A_2');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>2.</b></td><td style="vertical-align:top;" ><b>Arbeidsongevallen en beroepsziekten (wettelijke vergoedingen wegens blijvende ongeschiktheid)</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >Uitkeringen, toelagen en renten (behalve omzettingsrenten):</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1217"><b>1<span style="color:#C60C08">217</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1217" maxlength="11" value="" id="text_c1217" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2217" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">b)</td><td style="vertical-align:top;" >Achterstallen van onder a bedoelde uitkeringen, enz.:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1224"><b>1<span style="color:#C60C08">224</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1224" maxlength="11" value="" id="text_c1224" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2224" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">c)</td><td style="vertical-align:top;" >Omzettingsrenten van kapitalen die zijn betaald of toegekend:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">1)</td><td style="vertical-align:top;" >in 2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1226"><b>1<span style="color:#C60C08">226</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1226" maxlength="11" value="" id="text_c1226" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2226" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">2)</td><td style="vertical-align:top;" >tijdens de jaren 2011 tot 2022:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1227"><b>1227</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1227" maxlength="11" value="" id="text_c1227" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2227" value=""/></td></tr>
+        
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=V&contentkey=application_help_0102_1#anchor_A_3');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>3.</b></td><td style="vertical-align:top;" ><b>Pensioensparen</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >Pensioenen, renten, spaartegoeden, kapitalen en afkoopwaarden die gezamenlijk belastbaar zijn:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1219"><b>1<span style="color:#C60C08">219</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1219" maxlength="11" value="" id="text_c1219" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2219" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">b)</td><td style="vertical-align:top;" >Spaartegoeden, kapitalen en afkoopwaarden die afzonderlijk belastbaar zijn:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">1)</td><td style="vertical-align:top;" >tegen 33 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1220"><b>1<span style="color:#C60C08">220</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1220" maxlength="11" value="" id="text_c1220" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2220" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">2)</td><td style="vertical-align:top;" >tegen 16,5 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1221"><b>1<span style="color:#C60C08">221</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1221" maxlength="11" value="" id="text_c1221" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2221" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">3)</td><td style="vertical-align:top;" >tegen 8 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1222"><b>1<span style="color:#C60C08">222</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1222" maxlength="11" value="" id="text_c1222" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2222" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=V&contentkey=application_help_0102_1#anchor_A_4');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>4.</b></td><td style="vertical-align:top;" ><b>Niet ingehouden persoonlijke sociale bijdragen:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1223"><b>1223</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1223" maxlength="11" value="" id="text_c1223" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2223" value=""/></td></tr>
+        
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr ><td style="padding-left:0px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" class="datetaxbox">B. BEDRIJFSVOORHEFFING</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        <tr>
+            <td colspan="8">
+                <a id="counter2"></a>
+            </td>
+        </tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=V&contentkey=application_help_0102_1#anchor_B');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;">1.</td><td style="vertical-align:top;" >Volgens fiches:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c225b_1"><span style="color:#C60C08">225</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c225b_1" maxlength="11" value="" onblur="calculateTotal1225(this.form,3);" id="text_c225b_1" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2225" value=""/></td></tr><tr ><td colspan="2"></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c225b_2"><span style="color:#C60C08">225</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c225b_2" maxlength="11" value="" onblur="calculateTotal1225(this.form,3);" id="text_c225b_2" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2225" value=""/></td></tr><tr ><td colspan="2"></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c225b_3"><span style="color:#C60C08">225</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c225b_3" maxlength="11" value="" onblur="calculateTotal1225(this.form,3);" id="text_c225b_3" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2225" value=""/></td></tr>
+        <tr><td colspan="2"></td><td class="grey"></td><td colspan="2" style="text-align:center"><a href="javascript:submitForm(cadreform,'/taxcalc2024/app/anonymous/private/taxform/increaseCounter2CadreV.do?cadreAnchor=counter2')">Een lijn toevoegen</a></td><td class="grey"></td><td colspan="2"></td></tr>
+        <tr><td colspan="2"></td><td class="grey"></td><td colspan="2"><hr class="fin-dark" style="width: 95%"/></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=V&contentkey=application_help_0102_1#anchor_B');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;">2.</td><td style="vertical-align:top;" >Totaal van rubriek 1:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1225"><b>1225</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1225" maxlength="11" value="" onfocus="calculateTotal1225(this.form,3);" readonly="readonly" id="text_c1225" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2225" value=""/></td></tr>
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            <tr ><td style="padding-left:0px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=V&contentkey=application_help_0102_1#anchor_C');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" class="datetaxbox">C. PENSIOENEN VAN BUITENLANDSE OORSPRONG (EN DE BIJHORENDE KOSTEN)</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+            
+            <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" ><b>Vermeld het land, de code waarnaast ze zijn ingevuld (bv. 1211) en het bedrag van de hierboven vermelde pensioenen van buitenlandse oorsprong (en de bijhorende kosten) waarvoor u aanspraak maakt op<span class="font-red"> belastingvermindering voor inkomsten van buitenlandse oorsprong</span> (pensioenen die zijn vrijgesteld met progressievoorbehoud of waarvoor de belasting tot de helft wordt verminderd) of op de <span class="font-red">afzonderlijke belasting tegen de aanslagvoet van 0 %</span>.</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+            <tr>
+                <td colspan="8">
+                    <a id="counterRevEtrgs1"></a>
+                </td>
+            </tr>
+            
+            <tr><td colspan="2"><table><tr ><td style="padding-right:10px;padding-left:40px;">Land:</td><td style="padding-right:10px;"><select name="text_E330_1" id="text_E330_1" style="width:190px;" class="country-select"><option value="" data-descr="(leeg)"></option><option value="ZY" title="INTERNATIONALE ORGANISATIE (VRIJSTELLING MET PROGRESSIEVOORBEHOUD)">INTERNATIONALE ORGANISATIE (VRIJSTELLING MET PROGRESSIEVOORBEHOUD)</option><optgroup label="Aangrenzende landen"><option value="DE" title="DUITSLAND">DUITSLAND</option><option value="FR" title="FRANKRIJK">FRANKRIJK</option><option value="LU" title="LUXEMBURG">LUXEMBURG</option><option value="NL" title="NEDERLAND">NEDERLAND</option></optgroup><optgroup label="Rest van Europa"><option value="AX" title="ÅLANDSEILANDEN">ÅLANDSEILANDEN</option><option value="AL" title="ALBANIË">ALBANIË</option><option value="AD" title="ANDORRA">ANDORRA</option><option value="BA" title="BOSNIË EN HERZEGOVINA">BOSNIË EN HERZEGOVINA</option><option value="BG" title="BULGARIJE">BULGARIJE</option><option value="CY" title="CYPRUS">CYPRUS</option><option value="DK" title="DENEMARKEN">DENEMARKEN</option><option value="EE" title="ESTLAND">ESTLAND</option><option value="FO" title="FAERÖER">FAERÖER</option><option value="FI" title="FINLAND">FINLAND</option><option value="GI" title="GIBRALTAR">GIBRALTAR</option><option value="GR" title="GRIEKENLAND">GRIEKENLAND</option><option value="GG" title="GUERNSEY">GUERNSEY</option><option value="HU" title="HONGARIJE">HONGARIJE</option><option value="IE" title="IERLAND">IERLAND</option><option value="IS" title="IJSLAND">IJSLAND</option><option value="IM" title="ISLE OF MAN">ISLE OF MAN</option><option value="IT" title="ITALIË">ITALIË</option><option value="JE" title="JERSEY">JERSEY</option><option value="XK" title="KOSOVO">KOSOVO</option><option value="HR" title="KROATIË">KROATIË</option><option value="LV" title="LETLAND">LETLAND</option><option value="LI" title="LIECHTENSTEIN">LIECHTENSTEIN</option><option value="LT" title="LITOUWEN">LITOUWEN</option><option value="MK" title="MACEDONIË">MACEDONIË</option><option value="MT" title="MALTA (INCLUSIEF GOZO EN DE MALTEZER ARCHIPEL)">MALTA (INCLUSIEF GOZO EN DE MALTEZER ARCHIPEL)</option><option value="MD" title="MOLDAVIË">MOLDAVIË</option><option value="MC" title="MONACO">MONACO</option><option value="ME" title="MONTENEGRO">MONTENEGRO</option><option value="NO" title="NOORWEGEN">NOORWEGEN</option><option value="BV" title="NOORWEGEN BOUVET">NOORWEGEN BOUVET</option><option value="SJ" title="NOORWEGEN SPITSBERGEN EN JAN MAYEN">NOORWEGEN SPITSBERGEN EN JAN MAYEN</option><option value="UA" title="OEKRAÏNE">OEKRAÏNE</option><option value="AT" title="OOSTENRIJK">OOSTENRIJK</option><option value="PL" title="POLEN">POLEN</option><option value="PT" title="PORTUGAL">PORTUGAL</option><option value="RO" title="ROEMENIË">ROEMENIË</option><option value="RU" title="RUSLAND">RUSLAND</option><option value="SM" title="SAN MARINO">SAN MARINO</option><option value="RS" title="SERVIË">SERVIË</option><option value="SI" title="SLOVENIË">SLOVENIË</option><option value="SK" title="SLOWAKIJE">SLOWAKIJE</option><option value="ES" title="SPANJE (INCLUSIEF DE BALEAREN EN DE CANARISCHE EILANDEN)">SPANJE (INCLUSIEF DE BALEAREN EN DE CANARISCHE EILANDEN)</option><option value="CZ" title="TSJECHIË">TSJECHIË</option><option value="VA" title="VATICAANSTAD">VATICAANSTAD</option><option value="GB" title="VERENIGD KONINKRIJK (EXCLUSIEF DE KANAALEILANDEN EN HET EILAND MAN)">VERENIGD KONINKRIJK (EXCLUSIEF DE KANAALEILANDEN EN HET EILAND MAN)</option><option value="BY" title="WIT-RUSLAND">WIT-RUSLAND</option><option value="SE" title="ZWEDEN">ZWEDEN</option><option value="CH" title="ZWITSERLAND">ZWITSERLAND</option></optgroup><optgroup label="Rest van de wereld"><option value="AF" title="AFGHANISTAN">AFGHANISTAN</option><option value="DZ" title="ALGERIJE">ALGERIJE</option><option value="AS" title="AMERIKAANS-SAMOA">AMERIKAANS-SAMOA</option><option value="VI" title="AMERIKAANSE MAAGDENEILANDEN">AMERIKAANSE MAAGDENEILANDEN</option><option value="ZZ" title="ANDERE LANDEN">ANDERE LANDEN</option><option value="AO" title="ANGOLA">ANGOLA</option><option value="AI" title="ANGUILLA">ANGUILLA</option><option value="AQ" title="ANTARCTICA">ANTARCTICA</option><option value="AG" title="ANTIGUA EN BARBUDA">ANTIGUA EN BARBUDA</option><option value="AR" title="ARGENTINIË">ARGENTINIË</option><option value="AM" title="ARMENIË">ARMENIË</option><option value="AW" title="ARUBA">ARUBA</option><option value="AU" title="AUSTRALIË (INCLUSIEF NORFOLKEILAND, KORAALZEE-EILANDEN EN ASHMORE EN CARTIEREILANDEN)">AUSTRALIË (INCLUSIEF NORFOLKEILAND, KORAALZEE-EILANDEN EN ASHMORE EN CARTIEREILANDEN)</option><option value="HM" title="AUSTRALIË HEARD EN MCDONALDEILANDEN">AUSTRALIË HEARD EN MCDONALDEILANDEN</option><option value="AZ" title="AZERBEIDZJAN">AZERBEIDZJAN</option><option value="BS" title="BAHAMA'S">BAHAMA'S</option><option value="BH" title="BAHREIN">BAHREIN</option><option value="BD" title="BANGLADESH">BANGLADESH</option><option value="BB" title="BARBADOS">BARBADOS</option><option value="BZ" title="BELIZE">BELIZE</option><option value="BJ" title="BENIN">BENIN</option><option value="BM" title="BERMUDA">BERMUDA</option><option value="BT" title="BHUTAN">BHUTAN</option><option value="BO" title="BOLIVIA">BOLIVIA</option><option value="BQ" title="BONAIRE, SINT EUSTATIUS en SABA">BONAIRE, SINT EUSTATIUS en SABA</option><option value="BW" title="BOTSWANA">BOTSWANA</option><option value="BR" title="BRAZILIË">BRAZILIË</option><option value="IO" title="BRITS TERRITORIUM IN DE INDISCHE OCEAAN">BRITS TERRITORIUM IN DE INDISCHE OCEAAN</option><option value="VG" title="BRITSE MAAGDENEILANDEN">BRITSE MAAGDENEILANDEN</option><option value="BN" title="BRUNEI">BRUNEI</option><option value="BF" title="BURKINA FASO">BURKINA FASO</option><option value="BI" title="BURUNDI">BURUNDI</option><option value="KH" title="CAMBODJA">CAMBODJA</option><option value="CA" title="CANADA">CANADA</option><option value="CF" title="CENTRAAL-AFRIKAANSE REPUBLIEK">CENTRAAL-AFRIKAANSE REPUBLIEK</option><option value="CL" title="CHILI">CHILI</option><option value="CN" title="CHINA">CHINA</option><option value="CX" title="CHRISTMASEILAND">CHRISTMASEILAND</option><option value="CC" title="COCOSEILANDEN">COCOSEILANDEN</option><option value="CO" title="COLOMBIA">COLOMBIA</option><option value="KM" title="COMOREN">COMOREN</option><option value="CD" title="CONGO, DEMOCRATISCHE REPUBLIEK (KINSHASA)">CONGO, DEMOCRATISCHE REPUBLIEK (KINSHASA)</option><option value="CG" title="CONGO, REPUBLIEK (BRAZZAVILLE)">CONGO, REPUBLIEK (BRAZZAVILLE)</option><option value="CK" title="COOKEILANDEN">COOKEILANDEN</option><option value="CR" title="COSTA RICA">COSTA RICA</option><option value="CU" title="CUBA">CUBA</option><option value="CW" title="CURAÇAO">CURAÇAO</option><option value="DJ" title="DJIBOUTI">DJIBOUTI</option><option value="DM" title="DOMINICA">DOMINICA</option><option value="DO" title="DOMINICAANSE REPUBLIEK">DOMINICAANSE REPUBLIEK</option><option value="EC" title="ECUADOR">ECUADOR</option><option value="EG" title="EGYPTE">EGYPTE</option><option value="SV" title="EL SALVADOR">EL SALVADOR</option><option value="GQ" title="EQUATORIAAL-GUINEA">EQUATORIAAL-GUINEA</option><option value="ER" title="ERITREA">ERITREA</option><option value="ET" title="ETHIOPIË">ETHIOPIË</option><option value="FK" title="FALKLANDEILANDEN">FALKLANDEILANDEN</option><option value="FJ" title="FIJI">FIJI</option><option value="PH" title="FILIPIJNEN">FILIPIJNEN</option><option value="GF" title="FRANKRIJK FRANS-GUYANA">FRANKRIJK FRANS-GUYANA</option><option value="TF" title="FRANKRIJK FRANSE ZUIDELIJKE EN ANTARCTISCHE GEBIEDEN">FRANKRIJK FRANSE ZUIDELIJKE EN ANTARCTISCHE GEBIEDEN</option><option value="GP" title="FRANKRIJK GUADELOUPE">FRANKRIJK GUADELOUPE</option><option value="MQ" title="FRANKRIJK MARTINIQUE">FRANKRIJK MARTINIQUE</option><option value="NC" title="FRANKRIJK NIEUW-CALEDONIË">FRANKRIJK NIEUW-CALEDONIË</option><option value="RE" title="FRANKRIJK RÉUNION">FRANKRIJK RÉUNION</option><option value="BL" title="FRANKRIJK SAINT-BARTHÉLEMY">FRANKRIJK SAINT-BARTHÉLEMY</option><option value="MF" title="FRANKRIJK SINT-MAARTEN">FRANKRIJK SINT-MAARTEN</option><option value="PF" title="FRANS-POLYNESIË">FRANS-POLYNESIË</option><option value="GA" title="GABON">GABON</option><option value="GM" title="GAMBIA">GAMBIA</option><option value="GE" title="GEORGIË">GEORGIË</option><option value="GH" title="GHANA">GHANA</option><option value="GD" title="GRENADA">GRENADA</option><option value="GL" title="GROENLAND">GROENLAND</option><option value="GU" title="GUAM">GUAM</option><option value="GT" title="GUATEMALA">GUATEMALA</option><option value="GN" title="GUINEE">GUINEE</option><option value="GW" title="GUINEE-BISSAU">GUINEE-BISSAU</option><option value="GY" title="GUYANA">GUYANA</option><option value="HT" title="HAÏTI">HAÏTI</option><option value="HN" title="HONDURAS">HONDURAS</option><option value="HK" title="HONGKONG">HONGKONG</option><option value="IN" title="INDIA">INDIA</option><option value="ID" title="INDONESIË">INDONESIË</option><option value="IQ" title="IRAK">IRAK</option><option value="IR" title="IRAN">IRAN</option><option value="IL" title="ISRAËL">ISRAËL</option><option value="CI" title="IVOORKUST">IVOORKUST</option><option value="JM" title="JAMAICA">JAMAICA</option><option value="JP" title="JAPAN">JAPAN</option><option value="YE" title="JEMEN">JEMEN</option><option value="JO" title="JORDANIË">JORDANIË</option><option value="KY" title="KAAIMANEILANDEN">KAAIMANEILANDEN</option><option value="CV" title="KAAPVERDIË">KAAPVERDIË</option><option value="CM" title="KAMEROEN">KAMEROEN</option><option value="KZ" title="KAZACHSTAN">KAZACHSTAN</option><option value="KE" title="KENIA">KENIA</option><option value="KG" title="KIRGIZIË">KIRGIZIË</option><option value="KI" title="KIRIBATI">KIRIBATI</option><option value="UM" title="KLEINE PACIFISCHE EILANDEN VAN DE VERENIGDE STATEN">KLEINE PACIFISCHE EILANDEN VAN DE VERENIGDE STATEN</option><option value="KW" title="KOEWEIT">KOEWEIT</option><option value="LA" title="LAOS">LAOS</option><option value="LS" title="LESOTHO">LESOTHO</option><option value="LB" title="LIBANON">LIBANON</option><option value="LR" title="LIBERIA">LIBERIA</option><option value="LY" title="LIBIË">LIBIË</option><option value="MO" title="MACAU">MACAU</option><option value="MG" title="MADAGASKAR">MADAGASKAR</option><option value="MW" title="MALAWI">MALAWI</option><option value="MV" title="MALDIVEN">MALDIVEN</option><option value="MY" title="MALEISIË">MALEISIË</option><option value="ML" title="MALI">MALI</option><option value="MA" title="MAROKKO">MAROKKO</option><option value="MH" title="MARSHALLEILANDEN">MARSHALLEILANDEN</option><option value="MR" title="MAURITANIË">MAURITANIË</option><option value="MU" title="MAURITIUS">MAURITIUS</option><option value="YT" title="MAYOTTE">MAYOTTE</option><option value="MX" title="MEXICO">MEXICO</option><option value="FM" title="MICRONESIA">MICRONESIA</option><option value="MN" title="MONGOLIË">MONGOLIË</option><option value="MS" title="MONTSERRAT">MONTSERRAT</option><option value="MZ" title="MOZAMBIQUE">MOZAMBIQUE</option><option value="MM" title="MYANMAR">MYANMAR</option><option value="NA" title="NAMIBIË">NAMIBIË</option><option value="NR" title="NAURU">NAURU</option><option value="NP" title="NEPAL">NEPAL</option><option value="NI" title="NICARAGUA">NICARAGUA</option><option value="NZ" title="NIEUW-ZEELAND">NIEUW-ZEELAND</option><option value="TK" title="NIEUW-ZEELAND TOKELAU-EILANDEN">NIEUW-ZEELAND TOKELAU-EILANDEN</option><option value="NE" title="NIGER">NIGER</option><option value="NG" title="NIGERIA">NIGERIA</option><option value="NU" title="NIUE">NIUE</option><option value="KP" title="NOORD-KOREA">NOORD-KOREA</option><option value="MP" title="NOORDELIJKE MARIANEN">NOORDELIJKE MARIANEN</option><option value="NF" title="NORFOLK">NORFOLK</option><option value="UG" title="OEGANDA">OEGANDA</option><option value="UZ" title="OEZBEKISTAN">OEZBEKISTAN</option><option value="OM" title="OMAN">OMAN</option><option value="TL" title="OOST-TIMOR">OOST-TIMOR</option><option value="PK" title="PAKISTAN">PAKISTAN</option><option value="PW" title="PALAU">PALAU</option><option value="PA" title="PANAMA">PANAMA</option><option value="PG" title="PAPOEA-NIEUW-GUINEA">PAPOEA-NIEUW-GUINEA</option><option value="PY" title="PARAGUAY">PARAGUAY</option><option value="PE" title="PERU">PERU</option><option value="PN" title="PITCAIRNEILANDEN">PITCAIRNEILANDEN</option><option value="PR" title="PUERTO RICO">PUERTO RICO</option><option value="QA" title="QATAR">QATAR</option><option value="XR" title="RWANDA (verlaagd tarief)">RWANDA (verlaagd tarief)</option><option value="RW" title="RWANDA (vrijgesteld)">RWANDA (vrijgesteld)</option><option value="KN" title="SAINT KITTS EN NEVIS">SAINT KITTS EN NEVIS</option><option value="VC" title="SAINT VINCENT EN DE GRENADINES">SAINT VINCENT EN DE GRENADINES</option><option value="PM" title="SAINT-PIERRE EN MIQUELON">SAINT-PIERRE EN MIQUELON</option><option value="LC" title="SAINTLUCIA SAINT LUCIA">
+        
+        
+        
+        
+        
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            </tbody></table><input type="hidden" name="formComplete" id="formComplete"></div></div>
+        </form>
+        
+        
+                
+                
+            </div>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script>
+            var cookies = "/taxcalc2024/static/nl/help/data_politic.pdf";
+        </script>
+        
+        
+        
+            
+                <div class="container" style="text-align: right;padding-top: 20px;">
+                    <button type="button" id="NEXT_CADRE" class="btn btn-fin01"
+                            onclick="javascript:submitForm(document.forms.cadreform,'/taxcalc2024/app/anonymous/private/taxform/validateCadreV.do')">
+                        Naar het volgend vak
+                    </button>
+                </div>
+            
+        
+        <div style="display: flex; justify-content: flex-end; gap: 1em; margin-top: 2.5rem;">
+            <a href="vak4.html" style="text-decoration:none;">
+                <button type="button" class="action-btn" style="background:#b3c6e0; color:#1565c0;">Vorige</button>
+            </a>
+            <a href="index.html" style="text-decoration:none;">
+                <button type="button" class="action-btn">Terug naar start</button>
+            </a>
+            <a href="vak6.html" style="text-decoration:none;">
+                <button type="button" class="action-btn" style="background:#1976d2;">Volgende</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

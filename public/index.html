@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belastingaangifte Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            background: #f4f8fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #1a237e;
+        }
+        .sos-tax-banner {
+            background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 2.2rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 2rem auto 2rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(21,101,192,0.10);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .info-banner {
+            background: #e3f2fd;
+            color: #1565c0;
+            border-left: 6px solid #1976d2;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+        nav {
+            margin-bottom: 1.5rem;
+        }
+        .nav-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.6em 1.2em;
+            margin: 0 0.3em 0.5em 0;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background: #1565c0;
+        }
+        .action-btn {
+            background: #42a5f5;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.7em 1.5em;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 8px rgba(66,165,245,0.08);
+            transition: background 0.2s;
+        }
+        .action-btn:hover {
+            background: #1976d2;
+        }
+        h1, h2, h3 {
+            color: #1565c0;
+            font-weight: 700;
+        }
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 1rem 0.5rem;
+            }
+            .sos-tax-banner {
+                font-size: 1.3rem;
+                padding: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sos-tax-banner">
+        SOS tax
+    </header>
+    <div class="main-container">
+        <div class="info-banner">
+            Dit is een simulator, die toelaat anoniem uw belastingsaanslag te berekenen. De gegevens worden niet bijgehouden en de aangifte kan niet ingediend worden.
+        </div>
+        <!-- Navigatiebalk voorbeeld -->
+        <nav>
+            <button class="nav-btn active">Vak I</button>
+            <button class="nav-btn">Vak II</button>
+            <button class="nav-btn">Vak III</button>
+            <button class="nav-btn">Vak IV</button>
+            <button class="nav-btn">Vak V</button>
+            <button class="nav-btn">Vak VI</button>
+            <button class="nav-btn">Vak VII</button>
+            <button class="nav-btn">Vak VIII</button>
+            <button class="nav-btn">Vak IX</button>
+            <button class="nav-btn">Vak X</button>
+            <button class="nav-btn">Vak XI</button>
+            <button class="nav-btn">Vak XII</button>
+            <button class="nav-btn">Vak XIII</button>
+            <!-- Voeg meer vakken toe indien nodig -->
+        </nav>
+        <!-- ...existing code voor formulieren, inhoud, knoppen... -->
+        <!-- Voorbeeld actieknop -->
+        <button class="action-btn">Naar het volgend vak</button>
+        <!-- ...existing code... -->
+    </div>
+    <!-- ...existing code... -->
+
+
+
+<script src="/taxcalc2024/static/js/hashtable.js"></script>
+<script src="/taxcalc2024/static/js/postCode.js"></script>
+<script>
+    var postCode;
+    postCode = new Hashtable();
+    populatePostCode();
+    var postCodeYear;
+    postCodeYear = new Hashtable();
+    populatePostCodeYear();
+</script>
+
+<div class="container">
+    <div style="margin-right: 2%;margin-left:2%;">
+        <form name="cadreform" method="post" action="/taxcalc2024/app/anonymous/private/taxform/validateCadreI.do"><div><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="977953f2ada39a2f51785152f7be12be"></div>
+            <input type="hidden" name="cadreAnchor" value="cadreI">
+            <input type="hidden" name="redisplay" value="Cadre_I">
+            <table>
+                <tr>
+                        
+                    <td colspan="7"><h2 class="title">AANSLAGJAAR 2024 (inkomsten van het jaar 2023)&nbsp;:&nbsp;PERSOONLIJKE INFORMATIE</h2></td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        
+                        <div id='errorcount'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <hr class="fin-dark"/>
+                    </td>
+                </tr>
+                
+
+
+
+
+
+
+
+
+
+
+
+<tr >
+    <td colspan="7">
+        Postcode van uw gemeente/stad
+        
+        <input type="text" name="text_c01_c" maxlength="4" size="6" value="" onkeyup="checkCPLength(event,'Opgelet! De aanslagvoet van de gemeentebelasting voor 2024 is nog niet gekend. Deze van 2023 wordt gebruikt.');">
+    </td>
+</tr>
+
+
+<tr >
+    <td colspan="7">
+        Aanslagvoet van uw gemeente/stad
+        <input type="text" name="text_c01_e" maxlength="5" size="6" value="">
+    </td>
+</tr>
+
+<tr >
+    <td colspan="7">
+        <input type="checkbox" name="check_c01_h" value="checked" onclick="javascript:coupleNoCouple(document.forms.cadreform)" id="check_c01_h">
+        De aangifte gaat over echtgenoten of wettelijk samenwonenden (Situatie op 1 januari 2024)
+    </td>
+</tr>
+<tr >
+    <td colspan="7">
+        <input type="checkbox" name="check_c01_j" value="checked" id="check_c01_j">
+        Belastingplichtige onderworpen aan forfaitaire grondslagen van aanslag
+    </td>
+</tr>
+
+<tr>
+    <td colspan="5">
+        <table cellspacing="10" style="border-collapse: collapse">
+            <tr>
+                <td colspan="3">
+                    <b><span class="font-red"><i> Opgelet: Waar 2 antwoordkolommen zijn voorzien, moet u uw gegevens invullen als volgt. </i> </span></b>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid red; padding: 10px">
+                    <span class="font-red">Als u <b>alleen</b> een aangifte indient</span>
+                </td>
+                <td style="border: 1px solid red; padding: 10px">
+                    <span class="font-red">Alleen in de linkerkolom</span>
+                </td>
+                <td style="border: 1px solid red">
+
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid red; padding: 10px">
+                    <span class="font-red">Als u een <b>gezamenlijke aangifte</b> indient met uw echtgenoot of wettelijk samenwonende partner</span>
+                </td>
+                <td style="border: 1px solid red; padding: 10px">
+                    <span class="font-red">De gegevens van de <b>oudste in de linkerkolom</b></span>
+                </td>
+                <td style="border: 1px solid red; padding: 10px">
+                    <span class="font-red">De gegevens van de <b>jongste in de rechterkolom</b></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid red">
+
+                </td>
+                <td colspan="2" style="border: 1px solid red; padding: 10px">
+                    <span class="font-red"><b>Dit geldt ook voor gehuwden en wettelijk  samenwonenden van een verschillend geslacht</b></span>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="7">
+        <hr class="fin-dark"/>
+    </td>
+</tr>
+
+
+
+<tr >
+    <td>Geboortedatum (dd/mm/jjjj)</td>
+    <td class="grey"></td>
+    <td colspan="2" style="text-align: center;"><input type="text" name="text_c02_b" maxlength="10" size="11" value=""></td>
+    <td class="grey"></td>
+    
+    
+        <td colspan="2" style="text-align: center;"><input type="text" name="text_c02_c" maxlength="10" size="11" value="" disabled="disabled"></td>
+    
+</tr>
+
+<tr>
+    <td colspan="7">
+        <hr class="fin-dark"/>
+    </td>
+</tr>
+
+            </table>
+            <input type="hidden" name="formComplete" id="formComplete">
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+writeErrorCount('','errorcount');
+</script>
+
+
+        
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var cookies = "/taxcalc2024/static/nl/help/data_politic.pdf";
+</script>
+
+
+
+    
+        <div class="container" style="text-align: right;padding-top: 20px;">
+            <button type="button" id="NEXT_CADRE" class="btn btn-fin01"
+                    onclick="javascript:submitForm(document.forms.cadreform,'/taxcalc2024/app/anonymous/private/taxform/validateCadreI.do')">
+                Naar het volgend vak
+            </button>
+        </div>
+    
+
+</body>
+</html>

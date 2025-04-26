@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belastingaangifte Calculator - Vak II</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            background: #f4f8fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #1a237e;
+        }
+        .sos-tax-banner {
+            background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 2.2rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 2rem auto 2rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(21,101,192,0.10);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .info-banner {
+            background: #e3f2fd;
+            color: #1565c0;
+            border-left: 6px solid #1976d2;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+        nav {
+            margin-bottom: 1.5rem;
+        }
+        .nav-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.6em 1.2em;
+            margin: 0 0.3em 0.5em 0;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background: #1565c0;
+        }
+        .action-btn {
+            background: #42a5f5;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.7em 1.5em;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 8px rgba(66,165,245,0.08);
+            transition: background 0.2s;
+        }
+        .action-btn:hover {
+            background: #1976d2;
+        }
+        h1, h2, h3 {
+            color: #1565c0;
+            font-weight: 700;
+        }
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 1rem 0.5rem;
+            }
+            .sos-tax-banner {
+                font-size: 1.3rem;
+                padding: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sos-tax-banner">
+        SOS tax
+    </header>
+    <div class="main-container">
+        <div class="info-banner">
+            Dit is een simulator, die toelaat anoniem uw belastingsaanslag te berekenen. De gegevens worden niet bijgehouden en de aangifte kan niet ingediend worden.
+        </div>
+        <nav style="overflow-x:auto; white-space:nowrap; margin-bottom:2rem;">
+            <a href="index.html"><button class="nav-btn">Vak I</button></a>
+            <button class="nav-btn active">Vak II</button>
+            <button class="nav-btn" disabled>Vak III</button>
+            <button class="nav-btn" disabled>Vak IV</button>
+            <!-- Voeg meer vakken toe indien gewenst -->
+        </nav>
+        <h2 style="margin-bottom:2rem;">Vak II: Persoonlijke gegevens en gezinslasten</h2>
+        <div style="background:#f8fafc; border-radius:12px; box-shadow:0 2px 8px #e3f2fd; padding:2rem; margin-bottom:2rem;">
+            <form>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="aantal-kinderen"><b>Aantal kinderen ten laste:</b></label>
+                    <input type="number" id="aantal-kinderen" name="aantal-kinderen" min="0" max="20" style="margin-left:1em; width: 60px;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="andere-gezinslasten"><b>Andere gezinslasten:</b></label>
+                    <input type="text" id="andere-gezinslasten" name="andere-gezinslasten" style="margin-left:1em; width: 250px;">
+                </div>
+                <!-- Voeg meer relevante velden toe voor Vak II -->
+            </form>
+        </div>
+        <div style="background:#fff; border-radius:12px; box-shadow:0 2px 8px #e3f2fd; padding:2rem;">
+            <form name="cadreform" method="post" action="/taxcalc2024/app/anonymous/private/taxform/validateCadreII.do">
+                <div><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="977953f2ada39a2f51785152f7be12be"></div>
+                <input type="hidden" name="redisplay" value="Cadre_II">
+                <input type="hidden" name="cadreAnchor" value="cadreII">
+                <input type="hidden" name="notesRelativeRubrique" value="">
+                <table style="width:100%; border-collapse:separate; border-spacing:0 0.5rem;">
+                    
+                    <tr>
+                        <td colspan="18">
+                                
+                            <h2 class="title">Vak II - PERSOONLIJKE GEGEVENS EN GEZINSLASTEN</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="16">
+                            
+                            <div id='errorcount'></div>
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="18">
+                            <hr class="fin-dark"/>
+                        </td>
+                    </tr>
+                    
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+    <td></td>
+    
+    <td colspan="17"><span class="datetaxbox">A. PERSOONLIJKE GEGEVENS</span><i>(Kruis de passende vakjes aan (rubrieken 1 tot 5) en vul - zo nodig - het gevraagde aantal in (rubriek 6))</i></td>
+</tr>
+
+
+<tr >
+    <td></td>
+    <td style="width: 20px;"><strong>1.</strong></td>
+    <td colspan="15"><strong>U was op 1.1.2024:</strong></td>
+</tr>
+
+
+
+
+<tr>
+    <td colspan="18" style="padding-left: 2%">
+        <table>
+            <tr >
+                <td colspan="3"></td>
+                <td style="font-size:1.05em; color:#1976d2; font-weight:500;">-</td>
+                <td colspan="2"><span class="font-red">ongehuwd en niet wettelijk samenwonend</span></td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1001">1001</label></strong></td>
+                <td style="padding:5px;"><input type="checkbox" name="check_c1001" value="checked" id="check_c1001"></td>
+                <td style="font-size:1.05em; color:#1976d2; font-weight:500;">-</td>
+                <td colspan="2"><span class="font-red">uit de echt gescheiden</span> of daarmee gelijkgesteld (door de beëindiging van de wettelijke samenwoning)</td>
+            </tr>
+            <tr >
+                <td colspan="3"></td>
+                <td style="font-size:1.05em; color:#1976d2; font-weight:500;">-</td>
+                <td colspan="2"><span class="font-red">van tafel en bed gescheiden</span></td>
+            </tr>
+            <tr >
+                <td></td>
+                <td colspan="6">
+                    <hr class="fin-dark"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><strong><label for="check_c1002">1002</label></strong></td>
+                
+                
+                    <td style="padding:5px;"><input type="checkbox" name="check_c1002" value="checked" id="check_c1002"></td>
+                
+                <td colspan="4"><span class="font-red">gehuwd of wettelijk samenwonend</span> ...</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="4"><i>(Als u op 1.1.2024 feitelijk gescheiden, maar nog niet uit de echt gescheiden was (of daarmee gelijkgesteld door de beëindiging van de wettelijke samenwoning), moet u zowel code 1002 (gehuwd of wettelijk samenwonend) als code 1018 (feitelijk gescheiden) aankruisen (en in voorkomend geval ook de andere toepasselijke codes van deze rubriek)).</i></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><img src="/taxcalc2024/static/images/vertical_down.gif" alt=""></td>
+                <td></td>
+               
+                <td>-</td>
+                <td>u bent <span class="font-red">in 2023</span> gehuwd en woonde sinds 2022 of vroeger, tot uw huwelijk, nog niet wettelijk samen met uw echtgenoot, of</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><strong><label for="check_c1003">1003</label></strong></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/taxcalc2024/static/images/end_branch.gif" alt="">
+                            </td>
+                            <td>
+                                <img src="/taxcalc2024/static/images/arrow.gif" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="padding:5px;"><input type="checkbox" name="check_c1003" value="checked" id="check_c1003"> ... en</td>
+                
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><img src="/taxcalc2024/static/images/vertical_down.gif" alt=""></td>
+                <td><img src="/taxcalc2024/static/images/vertical_down.gif" alt=""></td>
+                <td><img src="/taxcalc2024/static/images/bracket_down_right.gif" alt=""></td>
+                <td>-</td>
+                <td>u hebt <span class="font-red">in 2023</span> een verklaring van wettelijke samenwoning afgelegd</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><strong><label for="check_c1004">1004</label></strong></td>
+                <td><img src="/taxcalc2024/static/images/vertical_down.gif" alt=""></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/taxcalc2024/static/images/end_branch.gif" alt="">
+                            </td>
+                            <td>
+                                <img src="/taxcalc2024/static/images/arrow.gif" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="padding:5px;"><input type="checkbox" name="check_c1004" value="checked" id="check_c1004"></td>
+                <td colspan="2">De nettobestaansmiddelen van uw echtgenoot of wettelijk samenwonende partner bedroegen in 2023 niet meer dan 3.820 euro <span class="footnote">(1)</span></td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1018">1018</label></strong></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/taxcalc2024/static/images/end_branch.gif" alt="">
+                            </td>
+                            <td>
+                                <img src="/taxcalc2024/static/images/arrow.gif" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="padding:5px;"><input type="checkbox" name="check_c1018" value="checked" id="check_c1018"></td>
+                
+                <td colspan="3">...maar op 1.1.2024 leefden u en uw echtgenoot of wettelijk samenwonende partner <span class="font-red">feitelijk gescheiden</span></td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1019">1019</label></strong></td>
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/taxcalc2024/static/images/end_branch.gif" alt="">
+                            </td>
+                            <td>
+                                <img src="/taxcalc2024/static/images/arrow.gif" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                
+                
+                    <td style="padding:5px;"><input type="checkbox" name="check_c1019" value="checked" id="check_c1019"></td>
+                
+
+                
+                <td colspan="2">Uw feitelijke scheiding vond plaats <span class="font-red">in 2023</span></td>
+            </tr>
+            <tr >
+                <td colspan="18">
+                    <hr class="fin-dark"/>
+                </td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1010">1010</label></strong></td>
+                <td style="padding:5px;"><input type="checkbox" name="check_c1010" value="checked" id="check_c1010"></td>
+                
+                <td colspan="4"><span class="font-red">weduwnaar, weduwe</span> of daarmee gelijkgesteld (door het overlijden van uw wettelijk samenwonende partner)</td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1011">1011</label></strong></td>
+                <td><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="padding:5px;"><input type="checkbox" name="check_c1011" value="checked" id="check_c1011"></td>
+                
+                <td colspan="3">Uw echtgenoot of wettelijk samenwonende partner is overleden in 2023. Voor u en hem of haar:</td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1012">1012</label></strong></td>
+                <td></td>
+                <td><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                
+                
+                    <td style="padding:5px;"><input type="checkbox" name="check_c1012" value="checked" id="check_c1012"></td>
+                
+                <td colspan="2">kiest u voor één gemeenschappelijke aanslag</td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1013">1013</label></strong></td>
+                <td></td>
+                <td><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="padding:5px;"><input type="checkbox" name="check_c1013" value="checked" id="check_c1013"></td>
+                <td colspan="2">kiest u voor twee afzonderlijke aanslagen</td>
+            </tr>
+            <tr >
+                <td></td>
+                <td colspan="6">
+                    <hr class="fin-dark"/>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+
+                
+
+
+
+
+
+
+
+
+
+<script>
+    function preventUserClick(event) {
+        if (event.target.checked) {
+            event.preventDefault(); // Prevent checking the checkbox
+        }
+    }
+</script>
+
+
+
+
+<tr >
+</tr>
+
+<tr>
+    <td colspan="18" style="padding-left: 2%">
+        <table>
+            
+            
+            <tr >
+                <tr>
+                    <td style="width:15px;"></td>
+                    <td><strong>2.</strong></td>
+                    <td colspan="15">Deze aangifte gaat over:</td>
+                </tr>
+                <tr>
+                    <td style="width:15px;"></td>
+                    <td><strong><label for="check_c1022">1022</label></strong></td>
+                    
+                    
+                        <td style="padding:5px;"><input type="checkbox" name="check_c1022" value="checked" id="check_c1022"></td>
+                    
+                    <td colspan="4">een belastingplichtige die <span class="font-red">in 2023 overleden</span> is</td>
+                </tr>
+            </tr>
+            <tr >
+                <td colspan="2"></td>
+                <td><img src="/taxcalc2024/static/images/vertical_down.gif" alt=""></td>
+                <td colspan="4">Bij zijn of haar overlijden was hij of zij:</td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1023">1023</label></strong></td>
+                <td><img src="/taxcalc2024/static/images/vertical_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                
+                
+                    <td style="padding:5px;"><input type="checkbox" name="check_c1023" value="checked" id="check_c1023"></td>
+                
+                <td colspan="3">gehuwd of wettelijk samenwonend</td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1024">1024</label></strong></td>
+                <td style="width: 40px;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                
+                
+                    <td style="padding:5px;"><input type="checkbox" name="check_c1024" value="checked" id="check_c1024"></td>
+                
+                <td colspan="3">niet meer gehuwd of wettelijk samenwonend, maar eerder in 2023 was hij of zij weduwnaar, weduwe of daarmee gelijkgesteld (door het overlijden van zijn of haar wettelijk samenwonende partner) geworden</td>
+            </tr>
+            <tr >
+                <td colspan="3"></td>
+                <td><img src="/taxcalc2024/static/images/vertical_down.gif" alt=""></td>
+                <td colspan="3">Voor de belastingplichtige en zijn of haar eerder in 2023 overleden echtgenoot of wettelijk samenwonende partner:</td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1025">1025</label></strong></td>
+                <td></td>
+                <td style="width: 40px;"><img src="/taxcalc2024/static/images/vertical_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                
+                
+                    <td style="padding:5px;"><input type="checkbox" name="check_c1025" value="checked" id="check_c1025"></td>
+                
+                <td colspan="2">kiest u voor één gemeenschappelijke aanslag</td>
+            </tr>
+            <tr >
+                <td></td>
+                <td><strong><label for="check_c1026">1026</label></strong></td>
+                <td></td>
+                <td style="width: 40px;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                
+                
+                    <td style="padding:5px;"><input type="checkbox" name="check_c1026" value="checked" id="check_c1026"></td>
+                
+                <td colspan="2">kiest u voor twee afzonderlijke aanslagen</td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<tr>
+    <td colspan="18">
+        <hr class="fin-dark"/>
+    </td>
+</tr>
+
+
+
+                
+
+
+
+
+
+
+
+
+
+<tr >
+    <td></td>
+    
+    
+        <td style="vertical-align: top;"><strong>3.</strong></td>
+    
+    
+    <td style="vertical-align: top;padding-right:5px;"><strong>a)</strong></td>
+    <td colspan="7" style="vertical-align: top;">Hebt u, als ambtenaar, ander personeelslid, gepensioneerde of rechthebbende op een overlevingspensioen van een <span class="font-red">internationale organisatie</span>, in 2023 beroepsinkomsten verkregen die bij overeenkomst zijn vrijgesteld en niet in aanmerking kunnen komen voor de berekening van de belasting op uw andere inkomsten?</td>
+    <td></td>
+    <td class="grey" style="width: 1px;"></td>
+    <td style="width:50px;text-align: center;"><strong><label for="check_c1062">1062</label></strong></td>
+    <td>
+        <table cellspacing="0" border="0" cellpadding="0">
+            <tr>
+                <td><input type="checkbox" name="check_c1062" value="checked" id="check_c1062"></td>
+                <td>Ja</td>
+            </tr>
+        </table>
+    </td>
+    <td class="grey" style="width: 1px;"></td>
+    
+    
+        <td colspan="2"><input type="hidden" name="check_c2062" value=""></td>
+    
+</tr>
+
+
+    
+    <tr >
+        <td colspan="4"></td>
+        <td colspan="7">Zo ja, bedroegen die beroepsinkomsten in 2023, meer dan 12.550 euro <span class="footnote">(1)</span>?</td>
+        <td></td>
+        <td class="grey"></td>
+        <td style="text-align: center;"><strong><label for="check_c1020">1020</label></strong></td>
+        <td>
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="check_c1020" value="checked" id="check_c1020"></td>
+                    <td>Ja</td>
+                </tr>
+            </table>
+        </td>
+        <td class="grey"></td>
+        <td colspan="2"></td>
+    </tr>
+
+    <tr>
+        <td colspan="2"></td>
+        <td colspan="16"><hr class="fin-dark"/></td>
+    </tr>
+
+    
+    <tr >
+        <td colspan="3"></td>
+        <td style="vertical-align: top;padding-right:5px;"><strong>b)</strong></td>
+        <td colspan="7">Was u op 1.1.2024 gehuwd of wettelijk samenwonend met een in a bedoelde ambtenaar, enz. van een <span class="font-red">internationale organisatie</span>, die in 2023 meer dan 12.550 euro <span class="footnote">(1)</span> beroepsinkomsten heeft verkregen die bij overeenkomst zijn vrijgesteld en niet in aanmerking kunnen komen voor de berekening van de belasting op zijn andere inkomsten?</td>
+        <td></td>
+        <td class="grey"></td>
+        <td style="text-align: center;"><strong><label for="check_c1021">1021</label></strong></td>
+        <td>
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="check_c1021" value="checked" id="check_c1021"></td>
+                    <td>Ja</td>
+                </tr>
+            </table>
+        </td>
+        <td class="grey"></td>
+        <td colspan="2"></td>
+    </tr>
+
+
+                
+
+
+
+
+
+
+
+
+
+
+    <tr >
+        <td colspan="18">
+            <hr class="fin-dark"/>
+        </td>
+    </tr>
+    <tr >
+        <td></td>
+        <td><strong>4.</strong></td>
+        <td colspan="8" style="vertical-align: top;"><b>Hebt u een zware handicap?</b></td>
+        <td></td>
+        <td class="grey"></td>
+        <td style="text-align: center;"><strong><label for="check_c1028">1028</label></strong></td>
+        <td>
+            <table cellspacing="0" border="0" cellpadding="0">
+                <tr>
+                    <td><input type="checkbox" name="check_c1028" value="checked" id="check_c1028"></td>
+                    <td>Ja</td>
+                </tr>
+            </table>
+        </td>
+        <td class="grey"></td>
+        
+        
+            <td colspan="2"><input type="hidden" name="check_c2028" value=""></td>
+        
+    </tr>
+
+    <tr >
+        <td colspan="18">
+            <hr class="fin-dark"/>
+        </td>
+    </tr>
+
+
+                
+
+
+
+
+
+
+
+
+
+    
+    <tr >
+        <td></td>
+        <td style="vertical-align: top;"><strong>5.</strong></td>
+        <td colspan="8">
+            Als u <span class="font-red">alleen wordt belast</span> en in B, 1 tot B, 3 hierna <span class="font-red">één of meer kinderen ten laste</span> vermeldt, beantwoord dan ook de volgende vraag :
+            <br/>
+            maakte er op 1.1.2024 <span class="font-red">een andere persoon</span> dan uw kinderen, pleegkinderen, kleinkinderen, achterkleinkinderen, ouders, pleegouders, grootouders, overgrootouders, broers en zussen, <span class="font-red">deel uit van uw gezin</span>?
+        </td>
+        <td></td>
+        <td class="grey"></td>
+        <td style="text-align: center;"><strong><label for="check_c1101">1101</label></strong></td>
+        <td>
+            <table cellspacing="0" border="0" cellpadding="0">
+                <tr>
+                    <td><input type="checkbox" name="check_c1101" value="checked" id="check_c1101"></td>
+                    <td>Neen</td>
+                </tr>
+            </table>
+        </td>
+        <td class="grey"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr >
+        <td colspan="18">
+            <hr class="fin-dark"/>
+        </td>
+    </tr>
+
+
+
+                
+
+
+
+
+
+
+
+
+
+    
+    <tr >
+        <td></td>
+        <td valign="top"><b>6.</b></td>
+        <td colspan="8" style="vertical-align: top;">
+            Als u <span class="font-red">tijdens het inkomstenjaar minder dan 12 maanden aan de personenbelasting onderworpen rijksinwoner</span> was, vermeld dan hier hoeveel maanden <i>(van 0 tot 11)</i> u aan die belasting onderworpen was <i>(als u de 15de van de maand onderworpen was, mag u die maand meetellen, anders niet)</i>: <br/><span class="font-red"><i>Uitzondering: de maanden dat een overleden persoon de 15de van de maand niet meer aan de personenbelasting onderworpen was door zijn of haar overlijden, mogen wel worden meegeteld.</i></span></td>
+        <td></td>
+        <td class="grey"></td>
+        <td></td>
+        <td style="text-align: center;"><b><label for="text_c1199">1199</label></b></td>
+        <td></td>
+        <td style="text-align: center;"><input type="text" name="text_c1199" maxlength="2" value="" id="text_c1199" style="width:45px"></td>
+        <td></td>
+    </tr>
+    <tr >
+        <td colspan="18">
+            <hr class="fin-dark"/>
+        </td>
+    </tr>
+
+
+
+                
+                
+
+
+
+
+
+
+
+
+
+
+<script>
+    var wizard = null;
+    var keyCodes = [8, 46, 97, 98, 99, 100, 101, 102, 103, 104, 105];	//BackSpace, del, number
+    document.onclick = documentClicked;
+
+    function openWizardPac() {
+        wizard = newWindow('/taxonweb2024/wui/#/wizard/pac', '', 950, 600, 'yes', 'yes');
+    }
+</script>
+
+
+
+
+
+<tr>
+    <td></td>
+    
+    <td colspan="17">
+        <span class="datetaxbox">
+            
+            B. GEZINSLASTEN
+        </span>
+        <i><i>(Vul het gevraagde aantal in tenzij het gelijk is aan 0)</i></i>
+    </td>
+</tr>
+<tr>
+    <td colspan="18"></td>
+</tr>
+
+<tr>
+    <td colspan="18">
+        <table>
+            
+            
+            <tr >
+                <td style="vertical-align: top">
+                    <table>
+                        <tr>
+                            <td>
+                            </td>
+                    </table>
+                </td>
+                <td style="vertical-align: top"><strong>1.</strong></td>
+                <td style="vertical-align: top;text-align: center">a)</td>
+                <td colspan="4" style="vertical-align: top">Aantal <span class="font-red">kinderen</span> die fiscaal <span class="font-red">volledig</span> te uwen laste zijn:</td>
+                <td style="width: 50px;text-align:center;"><strong><label for="text_c1030">1030</label></strong></td>
+                <td>
+                    <input type="text" name="text_c1030" maxlength="2" value="" id="text_c1030" style="width:45px">
+                </td>
+            </tr>
+
+            <tr >
+                <td></td>
+                <td style="vertical-align: top">
+                </td>
+                <td style="vertical-align: top">
+                    <table>
+                        <tr>
+                            <td><img src="/taxcalc2024/static/images/end_branch.gif" alt=""></td>
+                            <td><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="text-align: center">b)</td>
+                <td colspan="3">Aantal van de in 1, a  vermelde kinderen met een <span class="font-red">zware handicap</span>:</td>
+                <td style="text-align: center"><strong><label for="text_c1031">1031</label></strong></td>
+                <td>
+                    <input type="text" name="text_c1031" maxlength="2" value="" id="text_c1031" style="width:45px">
+                </td>
+            </tr>
+            <tr >
+                <td></td>
+                <td style="vertical-align: top">
+                </td>
+                <td style="vertical-align: top;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="vertical-align: top;text-align: center">c)</td>
+                <td colspan="3">Aantal van de in 1, a  vermelde kinderen die <span class="font-red">op 1.1.2024 nog geen 3 jaar</span> waren en voor wie u in vak X, II, B <span class="font-red">geen belastingvermindering voor kinderoppas</span> vraagt:</td>
+                <td style="text-align: center"><strong><label for="text_c1038">1038</label></strong></td>
+                <td>
+                    <input type="text" name="text_c1038" maxlength="2" value="" id="text_c1038" style="width:45px">
+                </td>
+            </tr>
+            <tr >
+                <td colspan="2"></td>
+                <td style="vertical-align: top;text-align: center;">
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><img src="/taxcalc2024/static/images/end_branch.gif" alt=""></td>
+                            <td><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="text-align: center">d)</td>
+                <td colspan="2">Aantal van de in 1, c vermelde kinderen met een <span class="font-red">zware handicap</span>:</td>
+                <td style="text-align: center"><strong><label for="text_c1039">1039</label></strong></td>
+                <td>
+                    <input type="text" name="text_c1039" maxlength="2" value="" id="text_c1039" style="width:45px">
+                </td>
+            </tr>
+
+            
+            
+            
+            <tr >
+                <td style="vertical-align: top;">
+                    <table>
+                        <tr>
+                            <td>
+                            </td>
+                            
+                        </tr>
+                    </table>
+                </td>
+                <td style="vertical-align: top;"><strong>2.</strong></td>
+                <td style="vertical-align: top;text-align: center">a)</td>
+                <td colspan="4" style="vertical-align: top;">Aantal <span class="font-red">kinderen</span> die fiscaal <span class="font-red">te uwen laste</span> zijn, maar voor wie de helft van het belastingvoordeel moet worden toegekend aan de andere ouder door de <span class="font-red">gelijkmatig verdeelde huisvesting</span> van de kinderen:</td>
+                <td style="text-align: center"><strong><label for="text_c1034">1034</label></strong></td>
+                <td>
+                    <input type="text" name="text_c1034" maxlength="2" value="" id="text_c1034" style="width:45px">
+                </td>
+            </tr>
+
+            <tr >
+                <td></td>
+                <td style="vertical-align: top">
+                </td>
+                <td style="vertical-align: top;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="text-align: center">b)</td>
+                <td colspan="3">Aantal van de in 2, a vermelde kinderen met een <span class="font-red">zware handicap</span>:</td>
+                <td style="text-align: center"><strong><label for="text_c1035">1035</label></strong></td>
+                <td>
+                    <input type="text" name="text_c1035" maxlength="2" value="" id="text_c1035" style="width:45px">
+                </td>
+            </tr>
+            <tr >
+                <td></td>
+                <td style="vertical-align: top">
+                </td>
+                <td style="vertical-align: top;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="vertical-align: top;text-align: center">c)</td>
+                <td colspan="3">Aantal van de in 2, a vermelde kinderen die <span class="font-red">op 1.1.2024 nog geen 3 jaar</span> waren en voor wie u in vak X, II, B <span class="font-red">geen belastingvermindering voor kinderoppas</span> vraagt:</td>
+                <td style="text-align: center"><strong><label for="text_c1054">1054</label></strong></td>
+                <td>
+                    <input type="text" name="text_c1054" maxlength="2" value="" id="text_c1054" style="width:45px">
+                </td>
+            </tr>
+            <tr >
+                <td></td>
+                <td style="vertical-align: top">
+                </td>
+                <td style="vertical-align: top;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="text-align: center">b)</td>
+                <td colspan="3">Aantal van de in 2, a vermelde kinderen met een <span class="font-red">zware handicap</span>:</td>
+                <td style="text-align: center"><strong><label for="text_c1035">1035</label></strong></td>
+                <td>
+                    
+                    
+                        <input type="text" name="text_c1035" maxlength="2" value="" id="text_c1035" style="width:45px">
+                    
+                </td>
+            </tr>
+            <tr >
+                <td></td>
+                <td style="vertical-align: top">
+                </td>
+                <td style="vertical-align: top;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="text-align: center">c)</td>
+                <td colspan="3">Aantal van de in 2, a vermelde kinderen die <span class="font-red">op 1.1.2024 nog geen 3 jaar</span> waren en voor wie u in vak X, II, B <span class="font-red">geen belastingvermindering voor kinderoppas</span> vraagt:</td>
+                <td style="text-align: center"><strong><label for="text_c1054">1054</label></strong></td>
+                <td>
+                    
+                    
+                        <input type="text" name="text_c1054" maxlength="2" value="" id="text_c1054" style="width:45px">
+                    
+                </td>
+            </tr>
+            <tr >
+                <td colspan="2"></td>
+                <td style="vertical-align: top;text-align: center;">
+                </td>
+                <td><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="text-align: center">d)</td>
+                <td colspan="2">Aantal van de in 2, c vermelde kinderen met een <span class="font-red">zware handicap</span>:</td>
+                <td style="text-align: center"><strong><label for="text_c1055">1055</label></strong></td>
+                <td>
+                    
+                    
+                        <input type="text" name="text_c1055" maxlength="2" value="" id="text_c1055" style="width:45px">
+                    
+                </td>
+            </tr>
+
+
+            
+            
+            <tr >
+                <td style="vertical-align: top;">
+                    <table>
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="vertical-align: top;"><strong>3.</strong></td>
+                <td style="vertical-align: top;text-align: center">a)</td>
+                <td colspan="4" style="vertical-align: top;">Aantal <span class="font-red">kinderen</span> die fiscaal <span class="font-red">ten laste</span> zijn <span class="font-red">van de andere ouder</span>, maar voor wie de helft van het belastingvoordeel aan u moet worden toegekend door de <span class="font-red">gelijkmatig verdeelde huisvesting</span> van de kinderen:</td>
+                <td style="text-align: center"><strong><label for="text_c1036">1036</label></strong></td>
+                <td>
+                    
+                    
+                        <input type="text" name="text_c1036" maxlength="2" value="" id="text_c1036" style="width:45px">
+                    
+                </td>
+            </tr>
+
+            <tr >
+                <td></td>
+                <td style="vertical-align: top">
+                </td>
+                <td style="vertical-align: top;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="text-align: center">b)</td>
+                <td colspan="3">Aantal van de in 3, a vermelde kinderen met een <span class="font-red">zware handicap</span>:</td>
+                <td style="text-align: center"><strong><label for="text_c1037">1037</label></strong></td>
+                <td>
+                    
+                    
+                        <input type="text" name="text_c1037" maxlength="2" value="" id="text_c1037" style="width:45px">
+                    
+                </td>
+            </tr>
+            <tr >
+                <td></td>
+                <td style="vertical-align: top">
+                </td>
+                <td style="vertical-align: top;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="vertical-align: top;text-align: center">c)</td>
+                <td colspan="3">Aantal van de in 3, a vermelde kinderen die <span class="font-red">op 1.1.2024 nog geen 3 jaar</span> waren en voor wie u in vak X, II, B <span class="font-red">geen belastingvermindering voor kinderoppas</span> vraagt:</td>
+                <td style="text-align: center"><strong><label for="text_c1058">1058</label></strong></td>
+                <td>
+                    
+                    
+                        <input type="text" name="text_c1058" maxlength="2" value="" id="text_c1058" style="width:45px">
+                    
+                </td>
+            </tr>
+            <tr >
+                <td colspan="2"></td>
+                <td style="vertical-align: top;text-align: center;">
+                </td>
+                <td><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                <td style="text-align: center">d)</td>
+                <td colspan="2">Aantal van de in 3, c vermelde kinderen met een <span class="font-red">zware handicap</span>:</td>
+                <td style="text-align: center"><strong><label for="text_c1059">1059</label></strong></td>
+                <td>
+                    
+                    
+                        <input type="text" name="text_c1059" maxlength="2" value="" id="text_c1059" style="width:45px">
+                    
+                </td>
+            </tr>
+
+                
+                
+                <tr >
+                    <td style="vertical-align: top;">
+                        <table>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="vertical-align: top;"><strong>4.</strong></td>
+                    <td colspan="4">Aantal <span class="font-red">ouders, grootouders, overgrootouders, broers en zussen van 65 jaar of ouder</span> die fiscaal te uwen laste zijn :</td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td style="vertical-align: top;text-align: center">a)</td>
+                    <td colspan="4" style="vertical-align: top;">en bij wie een <span class="font-red">verminderde zelfredzaamheid van ten minste 9 punten is vastgesteld</span>:</td>
+                    <td style="text-align: center"><strong><label for="text_c1027">1027</label></strong></td>
+                    <td>
+                        
+                        
+                            <input type="text" name="text_c1027" maxlength="2" value="" id="text_c1027" style="width:45px">
+                        
+                    </td>
+                </tr>
+
+                <tr >
+                    <td></td>
+                    <td style="vertical-align: top">
+                    </td>
+                    <td style="vertical-align: top;"><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                    <td style="text-align: center">b)</td>
+                    <td colspan="3">Aantal van de in 4, a vermelde personen die <span class="font-red">in aanslagjaar 2021 al fiscaal te uwen laste</span> waren <span class="font-red">in de hoedanigheid van ouder, (over)grootouder, broer of zus van 65 jaar of ouder</span> en die een <span class="font-red">zware handicap</span> hebben (ingevolge feiten overkomen en vastgesteld vóór de leeftijd van 65 jaar):</td>
+                    <td style="text-align: center"><strong><label for="text_c1029">1029</label></strong></td>
+                    <td>
+                        
+                        
+                            <input type="text" name="text_c1029" maxlength="2" value="" id="text_c1029" style="width:45px">
+                        
+                    </td>
+                </tr>
+                <tr >
+                    <td></td>
+                    <td style="vertical-align: top">
+                    </td>
+                    <td style="vertical-align: top;text-align: center">c)</td>
+                    <td colspan="4">en bij wie <span class="font-red">geen verminderde zelfredzaamheid van ten minste 9 punten is vastgesteld</span>, maar die <span class="font-red">in aanslagjaar 2021 al fiscaal te uwen laste</span> waren <span class="font-red">in de hoedanigheid van ouder, (over)grootouder, broer of zus van 65 jaar of ouder</span>:</td>
+                    <td style="text-align: center"><strong><label for="text_c1043">1043</label></strong></td>
+                    <td>
+                        
+                        
+                            <input type="text" name="text_c1043" maxlength="2" value="" id="text_c1043" style="width:45px">
+                        
+                    </td>
+                </tr>
+                <tr >
+                    <td colspan="2"></td>
+                    <td style="vertical-align: top;text-align: center;">
+                    </td>
+                    <td><img src="/taxcalc2024/static/images/end_branch.gif" alt=""><img src="/taxcalc2024/static/images/arrow.gif" alt=""></td>
+                    <td style="text-align: center">d)</td>
+                    <td colspan="2">Aantal van de in 4, c vermelde personen met een <span class="font-red">zware handicap</span> (ingevolge feiten overkomen en vastgesteld vóór de leeftijd van 65 jaar):</td>
+                    <td style="text-align: center"><strong><label for="text_c1044">1044</label></strong></td>
+                    <td>
+                        
+                        
+                            <input type="text" name="text_c1044" maxlength="2" value="" id="text_c1044" style="width:45px">
+                        
+                    </td>
+                </tr>
+
+            
+            
+            <tr >
+                <td style="vertical-align: top">
+                    <table>
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="vertical-align: top;"><strong>5.</strong></td>
+                <td style="vertical-align: top;text-align: center">a)</td>
+                <td colspan="4" style="vertical-align: top; font-size:1.05em; color:#1976d2;">
+                    Aantal <span class="font-red">andere personen</span> die fiscaal te uwen laste zijn <em>(noch uzelf, noch uw echtgenoot, noch uw samenwonende partner meetellen!)</em>:
+                </td>
+                <td style="text-align: center; vertical-align: middle;">
+                    <strong><label for="text_c1032">1032</label></strong>
+                </td>
+                <td style="vertical-align: middle;">
+                    <input type="text" name="text_c1032" maxlength="2" value="" id="text_c1032" style="width:45px; border-radius:6px; border:1px solid #b3c6e0; padding:4px;">
+                </td>
+            </tr>
+            <tr >
+                <td></td>
+                <td style="vertical-align: top"></td>
+                <td style="vertical-align: middle;">
+                    <img src="/taxcalc2024/static/images/end_branch.gif" alt="" style="vertical-align:middle;">
+                    <img src="/taxcalc2024/static/images/arrow.gif" alt="" style="vertical-align:middle;">
+                </td>
+                <td style="text-align: center; font-size:1.1em; vertical-align: middle;">b)</td>
+                <td colspan="3" style="font-size:1.05em; color:#1976d2; vertical-align: middle;">
+                    Aantal van de in 5, a vermelde personen met een <span class="font-red">zware handicap</span>:
+                </td>
+                <td style="text-align: center; vertical-align: middle;">
+                    <strong><label for="text_c1033">1033</label></strong>
+                </td>
+                <td style="vertical-align: middle;">
+                    <input type="text" name="text_c1033" maxlength="2" value="" id="text_c1033" style="width:45px; border-radius:6px; border:1px solid #b3c6e0; padding:4px;">
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+
+
+                <tr>
+                    <td colspan="4">
+                        <hr class="fin-dark">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="1" style="vertical-align: top;text-align: center">
+                        <span class="footnote">(1)</span>
+                    </td>
+                    <td></td>
+                    <td colspan="15"><span class="footnote">Als u in vak II, rubriek A, 6 moet invullen (omdat u tijdens het inkomstenjaar minder dan 12 maanden aan de personenbelasting onderworpen rijksinwoner was), moet u dit bedrag vermenigvuldigen met het aantal maanden dat u in die rubriek moet invullen, en delen door 12. Rond het resultaat af naar het hogere of lagere veelvoud van 10 euro naargelang de eenheid 5 euro bereikt of niet.</span></td>
+                </tr>
+
+            </table>
+            <input type="hidden" name="formComplete" id="formComplete">
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+writeErrorCount('','errorcount');
+</script>
+
+
+        
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var cookies = "/taxcalc2024/static/nl/help/data_politic.pdf";
+</script>
+
+
+
+    
+        <div class="container" style="text-align: right;padding-top: 20px;">
+            <button type="button" id="NEXT_CADRE" class="btn btn-fin01"
+                    onclick="javascript:submitForm(document.forms.cadreform,'/taxcalc2024/app/anonymous/private/taxform/validateCadreII.do')">
+                Naar het volgend vak
+            </button>
+        </div>
+    
+
+
+            <button class="action-btn" type="submit">Naar het volgend vak</button>
+        </form>
+    </div>
+</body>
+</html>

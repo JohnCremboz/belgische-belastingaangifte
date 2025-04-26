@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belastingaangifte Calculator - Vak VI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            background: #f4f8fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #1a237e;
+        }
+        .sos-tax-banner {
+            background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 2.2rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+        }
+        .main-container {
+            max-width: 1000px;
+            margin: 2rem auto 2rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(21,101,192,0.10);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .info-banner {
+            background: #e3f2fd;
+            color: #1565c0;
+            border-left: 6px solid #1976d2;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+        nav {
+            margin-bottom: 1.5rem;
+        }
+        .nav-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.6em 1.2em;
+            margin: 0 0.3em 0.5em 0;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background: #1565c0;
+        }
+        .action-btn {
+            background: #42a5f5;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.7em 1.5em;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 8px rgba(66,165,245,0.08);
+            transition: background 0.2s;
+        }
+        .action-btn:hover {
+            background: #1976d2;
+        }
+        h1, h2, h3 {
+            color: #1565c0;
+            font-weight: 700;
+        }
+        .container {
+            background: #f8fafc;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #e3f2fd;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 900px) {
+            .main-container {
+                padding: 1rem 0.5rem;
+            }
+            .container {
+                padding: 1rem 0.5rem;
+            }
+            .container table {
+                font-size: 0.97em;
+            }
+        }
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 0.5rem 0.2rem;
+            }
+            .container {
+                padding: 0.5rem 0.2rem;
+            }
+            .sos-tax-banner {
+                font-size: 1.3rem;
+                padding: 1rem 0;
+            }
+            .container table, .container td, .container th {
+                font-size: 0.93em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sos-tax-banner">
+        SOS tax
+    </header>
+    <div class="main-container">
+        <div class="info-banner">
+            Dit is een simulator, die toelaat anoniem uw belastingsaanslag te berekenen. De gegevens worden niet bijgehouden en de aangifte kan niet ingediend worden.
+        </div>
+        <nav style="overflow-x:auto; white-space:nowrap; margin-bottom:2rem;">
+            <a href="index.html"><button class="nav-btn">Vak I</button></a>
+            <a href="vak2.html"><button class="nav-btn">Vak II</button></a>
+            <a href="vak3.html"><button class="nav-btn">Vak III</button></a>
+            <a href="vak4.html"><button class="nav-btn">Vak IV</button></a>
+            <a href="vak5.html"><button class="nav-btn">Vak V</button></a>
+            <button class="nav-btn active">Vak VI</button>
+            <a href="vak7.html"><button class="nav-btn">Vak VII</button></a>
+        </nav>
+        <h2 style="margin-bottom:2rem;">Vak VI: Ontvangen onderhoudsuitkeringen</h2>
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            <form name="cadreform" method="post" action="/taxcalc2024/app/anonymous/private/taxform/validateCadreVI.do">
+                <input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="977953f2ada39a2f51785152f7be12be">
+                <input type="hidden" name="redisplay" value="Cadre_VI">
+                <input type="hidden" name="cadreAnchor" value="cadreVI">
+                <input type="hidden" name="notesRelativeRubrique" value="">
+                <table style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th colspan="8"><h2 class="title">Vak VI - ONTVANGEN ONDERHOUDSUITKERINGEN</h2></th>
+                        </tr>
+                        <tr>
+                            <td colspan="8"><div id='errorcount'></div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8"><hr class="fin-dark"/></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8">
+                                <div style="display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.5em;">
+                                    <a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=VI&contentkey=application_help_0103_1#anchor_1');">
+                                        <img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting">
+                                    </a>
+                                    <b>1.</b>
+                                    <span><b>Niet gekapitaliseerde uitkeringen (werkelijk ontvangen bedrag):</b></span>
+                                </div>
+                            </td>
+                            <td class="grey"></td>
+                            <td style="text-align:center;"><label for="text_c1192"><b>1192</b></label></td>
+                            <td style="text-align:center;">
+                                <input type="text" name="text_c1192" maxlength="11" value="" id="text_c1192" style="width:120px" class="input-value">
+                            </td>
+                            <td class="grey"></td>
+                            <td colspan="2"><input type="hidden" name="text_c2192" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div style="display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.5em;">
+                                    <a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=VI&contentkey=application_help_0103_1#anchor_2');">
+                                        <img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting">
+                                    </a>
+                                    <b>2.</b>
+                                    <span><b>Uitkeringen die door een gerechtelijke beslissing met terugwerkende kracht zijn toegekend:</b></span>
+                                </div>
+                            </td>
+                            <td class="grey"></td>
+                            <td style="text-align:center;"><label for="text_c1193"><b>1193</b></label></td>
+                            <td style="text-align:center;">
+                                <input type="text" name="text_c1193" maxlength="11" value="" id="text_c1193" style="width:120px" class="input-value">
+                            </td>
+                            <td class="grey"></td>
+                            <td colspan="2"><input type="hidden" name="text_c2193" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div style="display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.5em;">
+                                    <a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=VI&contentkey=application_help_0103_1#anchor_3');">
+                                        <img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting">
+                                    </a>
+                                    <b>3.</b>
+                                    <span><b>Gekapitaliseerde uitkeringen (fictief jaarbedrag):</b></span>
+                                </div>
+                            </td>
+                            <td class="grey"></td>
+                            <td style="text-align:center;"><label for="text_c1194"><b>1194</b></label></td>
+                            <td style="text-align:center;">
+                                <input type="text" name="text_c1194" maxlength="11" value="" id="text_c1194" style="width:120px" class="input-value">
+                            </td>
+                            <td class="grey"></td>
+                            <td colspan="2"><input type="hidden" name="text_c2194" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div style="display: flex; align-items: center; gap: 0.5em;">
+                                    <span style="padding-left:2.5em;">a) datum van toekenning van het kapitaal <em>(dag, maand, jaar)</em>:</span>
+                                </div>
+                            </td>
+                            <td class="grey"></td>
+                            <td style="text-align:center;"><label for="text_c1195"><b>1195</b></label></td>
+                            <td style="text-align:center;">
+                                <input type="text" name="text_c1195" maxlength="10" value="" id="text_c1195" style="width:120px" class="input-value">
+                            </td>
+                            <td class="grey"></td>
+                            <td colspan="2"><input type="hidden" name="text_c2195" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div style="display: flex; align-items: center; gap: 0.5em;">
+                                    <span style="padding-left:2.5em;">b) bedrag van het kapitaal:</span>
+                                </div>
+                            </td>
+                            <td class="grey"></td>
+                            <td style="text-align:center;"><label for="text_c1196"><b>1196</b></label></td>
+                            <td style="text-align:center;">
+                                <input type="text" name="text_c1196" maxlength="11" value="" id="text_c1196" style="width:120px" class="input-value">
+                            </td>
+                            <td class="grey"></td>
+                            <td colspan="2"><input type="hidden" name="text_c2196" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div style="display: flex; align-items: center; gap: 0.5em; margin-top:1.5em;">
+                                    <a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=VI&contentkey=application_help_0103_1#anchor_4');">
+                                        <img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting">
+                                    </a>
+                                    <b>4.</b>
+                                    <span><b>Schuldenaar(s) van de onder 1 tot 3 bedoelde onderhoudsuitkeringen <em>(naam, voornaam en adres)</em>:</b></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-left: 40px;">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td style="width: 180px;">a) rijksinwoner(s):</td>
+                                        <td><input type="text" name="text_F400_1" maxlength="90" value="" style="width:100%"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="vertical-align:top;padding-left:40px;">
+                                <a href="javascript:submitForm(cadreform,'/taxcalc2024/app/anonymous/private/taxform/increaseCounterCadreVI_4A.do?cadreAnchor=counterField4A')">Een lijn toevoegen</a>
+                            </td>
+                            <td class="grey"></td>
+                            <td colspan="2"></td>
+                            <td class="grey"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-left: 40px;">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td style="width: 180px;">b) niet-rijksinwoner(s):</td>
+                                        <td><input type="text" name="text_F401_1" maxlength="90" value="" style="width:100%"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="grey"></td>
+                            <td colspan="2"></td>
+                            <td class="grey"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="vertical-align:top;padding-left:40px;">
+                                <a href="javascript:submitForm(cadreform,'/taxcalc2024/app/anonymous/private/taxform/increaseCounterCadreVI_4B.do?cadreAnchor=counterField4B')">Een lijn toevoegen</a>
+                            </td>
+                            <td class="grey"></td>
+                            <td colspan="2"></td>
+                            <td class="grey"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="hidden" name="formComplete" id="formComplete">
+                <div style="text-align: right; padding-top: 20px;">
+                    <button type="button" id="NEXT_CADRE" class="btn btn-fin01"
+                        onclick="javascript:submitForm(document.forms.cadreform,'/taxcalc2024/app/anonymous/private/taxform/validateCadreVI.do')">
+                        Naar het volgend vak
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 1em; margin-top: 2.5rem;">
+            <a href="vak5.html" style="text-decoration:none;">
+                <button type="button" class="action-btn" style="background:#b3c6e0; color:#1565c0;">Vorige</button>
+            </a>
+            <a href="index.html" style="text-decoration:none;">
+                <button type="button" class="action-btn">Terug naar start</button>
+            </a>
+            <a href="vak7.html" style="text-decoration:none;">
+                <button type="button" class="action-btn" style="background:#1976d2;">Volgende</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

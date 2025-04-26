@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belastingaangifte Calculator - Vak X</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            background: #f4f8fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #1a237e;
+        }
+        .sos-tax-banner {
+            background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 2.2rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+        }
+        .main-container {
+            max-width: 1000px;
+            margin: 2rem auto 2rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(21,101,192,0.10);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .info-banner {
+            background: #e3f2fd;
+            color: #1565c0;
+            border-left: 6px solid #1976d2;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+        nav {
+            margin-bottom: 1.5rem;
+        }
+        .nav-btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.6em 1.2em;
+            margin: 0 0.3em 0.5em 0;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background: #1565c0;
+        }
+        .action-btn {
+            background: #42a5f5;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.7em 1.5em;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 8px rgba(66,165,245,0.08);
+            transition: background 0.2s;
+        }
+        .action-btn:hover {
+            background: #1976d2;
+        }
+        h1, h2, h3 {
+            color: #1565c0;
+            font-weight: 700;
+        }
+        .container {
+            background: #f8fafc;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #e3f2fd;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 900px) {
+            .main-container {
+                padding: 1rem 0.5rem;
+            }
+            .container {
+                padding: 1rem 0.5rem;
+            }
+            .container table {
+                font-size: 0.97em;
+            }
+        }
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 0.5rem 0.2rem;
+            }
+            .container {
+                padding: 0.5rem 0.2rem;
+            }
+            .sos-tax-banner {
+                font-size: 1.3rem;
+                padding: 1rem 0;
+            }
+            .container table, .container td, .container th {
+                font-size: 0.93em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sos-tax-banner">
+        SOS tax
+    </header>
+    <div class="main-container">
+        <div class="info-banner">
+            Dit is een simulator, die toelaat anoniem uw belastingsaanslag te berekenen. De gegevens worden niet bijgehouden en de aangifte kan niet ingediend worden.
+        </div>
+        <nav style="overflow-x:auto; white-space:nowrap; margin-bottom:2rem;">
+            <a href="index.html"><button class="nav-btn">Vak I</button></a>
+            <a href="vak2.html"><button class="nav-btn">Vak II</button></a>
+            <a href="vak3.html"><button class="nav-btn">Vak III</button></a>
+            <a href="vak4.html"><button class="nav-btn">Vak IV</button></a>
+            <a href="vak5.html"><button class="nav-btn">Vak V</button></a>
+            <a href="vak6.html"><button class="nav-btn">Vak VI</button></a>
+            <a href="vak7.html"><button class="nav-btn">Vak VII</button></a>
+            <a href="vak8.html"><button class="nav-btn">Vak VIII</button></a>
+            <a href="vak9.html"><button class="nav-btn">Vak IX</button></a>
+            <button class="nav-btn active">Vak X</button>
+            <a href="vak11.html"><button class="nav-btn">Vak XI</button></a>
+        </nav>
+        <h2 style="margin-bottom:2rem;">Vak X: Slot en samenvatting</h2>
+        <div class="container" style="max-width: 950px; margin: 0 auto; box-shadow: 0 2px 12px #e3f2fd;">
+            <form name="cadreform" method="post" action="/taxcalc2024/app/anonymous/private/taxform/validateCadreX.do">
+                <div><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="977953f2ada39a2f51785152f7be12be"></div>
+                <div class="container"><div style="margin-right: 2%;margin-left:2%;"><input type="hidden" name="redisplay" value="Cadre_X"><input type="hidden" name="cadreAnchor" value="cadreX"><input type="hidden" name="notesRelativeRubrique" value=""><table style="width:100%; border-collapse: separate; border-spacing: 0;"><thead><tr><th colspan="3"></th><th colspan="2" style="width:12%;"></th><th></th><th colspan="2" style="width:12%;"></th></tr></thead><tbody><tr><td colspan="8"><h2 class="title">Vak X - (UITGAVEN DIE RECHT GEVEN OP) BELASTINGVERMINDERINGEN</h2></td></tr><tr><td colspan="8"><div id='errorcount'></div></td></tr><tr><td colspan="8"><hr class="fin-dark"/></td></tr>
+                
+                
+                    
+                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" ><b><span class="font-red">I. GEWESTELIJK</span></b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_1_A');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>A.   </b></td><td style="vertical-align:top;" ><b>Uitgaven voor behoud of herwaardering van beschermd onroerend erfgoed:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c3385"><b>3385</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c3385" maxlength="11" value="" id="text_c3385" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c4385" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_1_B');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>B.   </b></td><td style="vertical-align:top;" ><b>Betalingen voor prestaties in het kader van het wijk-werken:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c3363"><b>3363</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c3363" maxlength="11" value="" id="text_c3363" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c4363" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_1_C');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>C.   </b></td><td style="vertical-align:top;" ><b>Betalingen voor prestaties betaald met dienstencheques:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c3364"><b>3364</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c3364" maxlength="11" value="" id="text_c3364" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c4364" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_1_D');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>D.   </b></td><td style="vertical-align:top;" ><b>In het kader van geregistreerde en uiterlijk op 31.12.2018 gesloten renovatieovereenkomsten ter beschikking gestelde bedragen die in aanmerking komen voor belastingvermindering</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        <tr ><td style="padding-left:60px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" >Totaal van de ter beschikking gestelde bedragen:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:60px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">1.</td><td style="vertical-align:top;" >op 1.1.2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c3332"><b>3332</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c3332" maxlength="11" value="" id="text_c3332" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c4332" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:60px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">2.</td><td style="vertical-align:top;" >op 31.12.2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c3333"><b>3333</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c3333" maxlength="11" value="" id="text_c3333" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c4333" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_1_E');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>E.   </b></td><td style="vertical-align:top;" ><b>Belastingvermindering voor uitgaven gedaan van 2015 tot 2018 voor de vernieuwing van een woning verhuurd via een sociaal verhuurkantoor:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c3395"><b>3395</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c3395" maxlength="11" value="" id="text_c3395" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+                    
+                    
+                    
+                
+                
+        
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" ><b><span class="font-red">II. FEDERAAL</span></b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <script>
+            var wizard = null;
+            var keyCodes = [8, 46, 97, 98, 99, 100, 101, 102, 103, 104, 105];	//BackSpace, del, number
+            document.onclick = documentClicked;
+        
+            function documentClicked() {
+                if (wizard !== null && !wizard.closed) {
+                    wizard.focus();
+                }
+            }
+        
+            function openWizard394(event, field) {
+                for (var i = 0; i < keyCodes.length; i++) {
+                    if (keyCodes[i] === event.keyCode) {
+                        wizard = newWindow('/taxonweb2024/wui/#/wizard/liberalite', '', 950, 600, 'yes', 'yes');
+                    }
+                }
+            }
+        
+            function openWizard384(event, field) {
+                for (var i = 0; i < keyCodes.length; i++) {
+                    if (keyCodes[i] === event.keyCode) {
+                        wizard = newWindow('/taxcalc2024/app/anonymous/private/taxform/wizard384DisplayAction.do', '', 950, 600, 'yes', 'yes');
+                    }
+                }
+            }
+        
+            function openWizardElectricCharging() {
+                if ('null' != 'true') {
+                    
+                    submitForm(document.forms.cadreform, "/taxcalc2024/app/anonymous/private/taxform/wizardelectric.do");
+                    newWindow(' /taxonweb2024/wui/#/wizard/electric-charging ', '', 950, 600, 'yes', 'yes');
+                }
+            }
+        
+            function addLoadEvent(func) {
+                var oldonload = window.onload;
+                if (typeof window.onload != 'function') {
+                    window.onload = func;
+                } else {
+                    window.onload = function () {
+                        if (oldonload) {
+                            oldonload();
+                        }
+                        func();
+                    }
+                }
+            }
+        
+        
+        </script>
+        
+        
+            
+            
+                <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_A');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>A.</b></td><td style="vertical-align:top;" ><b>Giften:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1394"><b>1394</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1394" maxlength="11" value="" id="text_c1394" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+            
+        
+        
+        
+        
+        
+        
+            
+                
+                
+                    
+                    
+                        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a id="privatetaxformwizard384displayaction.do" href="javascript:newSizableWindow('/taxcalc2024/app/anonymous/private/taxform/wizard384DisplayAction.do',1230,650);"><img src="/taxcalc2024/static/images/responsive/icon_wizard.svg" class="icon_wizard" title="Hulp bij het invullen" alt="Hulp bij het invullen"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_B');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-45px;"></td><td style="vertical-align:top;position:absolute;margin-left:-60px;"></td><td style="vertical-align:top;padding-right:5px;"><b>B.</b></td><td style="vertical-align:top;" ><b>Voor belastingvermindering in aanmerking komend bedrag van de uitgaven voor kinderoppas:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1384"><b>1384</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1384" maxlength="11" value="" onkeyup="openWizard384(event, 'text_c1384');" id="text_c1384" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+                    
+                
+            
+            
+        
+        
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_C');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>C.</b></td><td style="vertical-align:top;" ><b>Bezoldigingen van een huisbediende:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1389"><b>1389</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1389" maxlength="11" value="" id="text_c1389" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_D');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>D.</b></td><td style="vertical-align:top;" ><b>Bijdragen en premies voor een aanvullend pensioen voor zelfstandigen:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1342"><b>1342</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1342" maxlength="11" value="" id="text_c1342" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2342" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_E');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>E.</b></td><td style="vertical-align:top;" ><b>Betalingen voor pensioensparen:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1361"><b>1361</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1361" maxlength="11" value="" id="text_c1361" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2361" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_F');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>F.</b></td><td style="vertical-align:top;" ><b>Betalingen voor het verwerven van nieuwe kapitaalaandelen van een in de Europese Economische Ruimte gevestigde vennootschap waarin u werknemer bent of waarvan uw vennootschap-werkgeefster een (klein)dochteronderneming is</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">1.</td><td style="vertical-align:top;" >Betalingen gedaan in 2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1362"><b>1362</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1362" maxlength="11" value="" id="text_c1362" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2362" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">2.</td><td style="vertical-align:top;" >Terugname van de voorheen verkregen belastingvermindering door de vervroegde overdracht van aandelen in 2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1366"><b>1366</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1366" maxlength="11" value="" id="text_c1366" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2366" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_G');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>G.</b></td><td style="vertical-align:top;" ><b>Betalingen die recht geven op de belastingvermindering voor het verwerven van nieuwe aandelen van startende ondernemingen</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">1.</td><td style="vertical-align:top;" >Betalingen die recht geven op de vermindering van 30 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1318"><b>1318</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1318" maxlength="11" value="" id="text_c1318" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2318" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">2.</td><td style="vertical-align:top;" >Betalingen die recht geven op de vermindering van 45 %:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1320"><b>1320</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1320" maxlength="11" value="" id="text_c1320" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2320" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">3.</td><td style="vertical-align:top;" >Terugname van de voorheen werkelijk verkregen belastingvermindering:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1328"><b>1328</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1328" maxlength="11" value="" id="text_c1328" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2328" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_H');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>H.</b></td><td style="vertical-align:top;" ><b>Betalingen die recht geven op de belastingvermindering voor het verwerven van nieuwe aandelen van groeibedrijven</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">1.</td><td style="vertical-align:top;" >Betalingen gedaan in 2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1334"><b>1334</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1334" maxlength="11" value="" id="text_c1334" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2334" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">2.</td><td style="vertical-align:top;" >Terugname van de voorheen werkelijk verkregen belastingvermindering:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1343"><b>1343</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1343" maxlength="11" value="" id="text_c1343" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2343" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_I');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>I.</b></td><td style="vertical-align:top;" ><b>Overgedragen belastingverminderingen voor in 2020 en 2021 gedane betalingen voor het verwerven van nieuwe aandelen van ondernemingen die hun omzet sterk hebben zien dalen door de Covid-19-pandemie</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">1.</td><td style="vertical-align:top;" >Overgedragen belastingvermindering voor betalingen gedaan in 2020:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1345"><b>1345</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1345" maxlength="11" value="" id="text_c1345" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2345" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">2.</td><td style="vertical-align:top;" >Overgedragen belastingvermindering voor betalingen gedaan in 2021:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1346"><b>1346</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1346" maxlength="11" value="" id="text_c1346" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2346" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">3.</td><td style="vertical-align:top;" >Terugname van de voorheen werkelijk verkregen belastingvermindering:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1377"><b>1377</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1377" maxlength="11" value="" id="text_c1377" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2377" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_J');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>J.</b></td><td style="vertical-align:top;" ><b>Premies van een rechtsbijstandsverzekering:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1344"><b>1344</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1344" maxlength="11" value="" id="text_c1344" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2344" value=""/></td></tr>
+        
+        
+        
+        
+        
+            <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_K');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>K.</b></td><td style="vertical-align:top;" ><b>Uitgaven voor de plaatsing van een vast laadstation voor elektrische wagens in of bij de woning:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1365"><b>1365</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1365" maxlength="11" value="" id="text_c1365" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2365" value=""/></td></tr>
+        
+        
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_L');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>L.</b></td><td style="vertical-align:top;" ><b>Minderwaarden op aandelen geleden naar aanleiding van de gehele verdeling van het maatschappelijk vermogen van private privaks:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1329"><b>1329</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1329" maxlength="11" value="" id="text_c1329" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2329" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_M');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>M.</b></td><td style="vertical-align:top;" ><b>Belastingvermindering voor:</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" ><b>-&nbsp;lage energiewoningen:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1347"><b>1347</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1347" maxlength="11" value="" id="text_c1347" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" ><b>-&nbsp;passiefwoningen:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1367"><b>1367</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1367" maxlength="11" value="" id="text_c1367" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" ><b>-&nbsp;nulenergiewoningen:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1348"><b>1348</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1348" maxlength="11" value="" id="text_c1348" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_N');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>N.</b></td><td style="vertical-align:top;" ><b>Belastingvermindering voor het verwerven van aandelen van erkende ontwikkelingsfondsen</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">1.</td><td style="vertical-align:top;" >Belastingvermindering voor aandelen verworven in 2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1323"><b>1323</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1323" maxlength="11" value="" id="text_c1323" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2323" value=""/></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">2.</td><td style="vertical-align:top;" >Terugname van de voorheen werkelijk verkregen belastingvermindering door de vervroegde overdracht van aandelen in 2023:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1376"><b>1376</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1376" maxlength="11" value="" id="text_c1376" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2376" value=""/></td></tr>
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_O');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>O.</b></td><td style="vertical-align:top;" ><b>Belastingvermindering voor uitgaven voor het verwerven van een nieuwe elektrische:</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" ><b>-&nbsp;mortorfiets of driewieler:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1325"><b>1325</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1325" maxlength="11" value="" id="text_c1325" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        <tr ><td style="padding-left:45px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" ><b>-&nbsp;vierwieler:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1326"><b>1326</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1326" maxlength="11" value="" id="text_c1326" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+        
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=X&contentkey=application_help_0106_1#anchor_2_P');"><img src="/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>P.</b></td><td style="vertical-align:top;" ><b>Belastingvermindering voor uitgaven in het kader van een adoptieprocedure:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1341"><b>1341</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1341" maxlength="11" value="" id="text_c1341" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"></td></tr>
+        
+        
+                
+            </tbody></table><input type="hidden" name="formComplete" id="formComplete">
+                <div style="display: flex; justify-content: flex-end; gap: 1em; padding-top: 20px;">
+                    <button type="button" id="NEXT_CADRE" class="btn btn-fin01"
+                        onclick="javascript:submitForm(document.forms.cadreform,'/taxcalc2024/app/anonymous/private/taxform/validateCadreX.do')">
+                        Naar het volgend vak
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 1em; margin-top: 2.5rem;">
+            <a href="vak9.html" style="text-decoration:none;">
+                <button type="button" class="action-btn" style="background:#b3c6e0; color:#1565c0;">Vorige</button>
+            </a>
+            <a href="index.html" style="text-decoration:none;">
+                <button type="button" class="action-btn">Terug naar start</button>
+            </a>
+            <a href="vak11.html" style="text-decoration:none;">
+                <button type="button" class="action-btn" style="background:#1976d2;">Volgende</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
