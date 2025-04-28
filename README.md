@@ -9,6 +9,9 @@ Dit project staat op dit moment nog maar in zijn kinderschoenen.
 
 # Belgische Belastingaangifte
 
+## Navigatie
+
+
 Dit project is een webapplicatie voor het berekenen van de belastingsaangifte in België. De applicatie biedt gebruikers de mogelijkheid om hun belastingaangifte te berekenen op basis van hun invoer.
 
 ## Bestandenstructuur
