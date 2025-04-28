@@ -1,3 +1,12 @@
+# BELANGRIJK
+
+Dit project staat op dit moment nog maar in zijn kinderschoenen.
+
+## Log:
+
+26/04/2025: frontend deels gebouwd, nog verder te verfijnen
+
+
 # Belgische Belastingaangifte
 
 Dit project is een webapplicatie voor het berekenen van de belastingsaangifte in België. De applicatie biedt gebruikers de mogelijkheid om hun belastingaangifte te berekenen op basis van hun invoer.
