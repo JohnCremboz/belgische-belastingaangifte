@@ -86,6 +86,7 @@
             }
         }
     </style>
+    <script src="js/coupleNoCouple.js"></script>
 </head>
 <body>
     <header class="sos-tax-banner">
@@ -1093,6 +1094,9 @@
 
             </table>
             <input type="hidden" name="formComplete" id="formComplete">
+            <input type="checkbox" name="check_c01_h" value="checked" onclick="coupleNoCouple(document.forms['cadreform'])" id="check_c01_h">
+            De aangifte gaat over echtgenoten of wettelijk samenwonenden (Situatie op 1 januari 2024)
+            <input type="text" name="text_c02_c" maxlength="10" size="11" value="" disabled="disabled">
         </form>
     </div>
 </div>

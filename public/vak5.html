@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belastingaangifte Calculator - Vak V</title>
+    <title>Vak V - Belastingaangifte</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="js/coupleNoCouple.js"></script>
     <style>
         /* ...gebruik dezelfde CSS als vak4.html... */
         body {
@@ -114,9 +115,9 @@
     </style>
 </head>
 <body>
-    <header class="sos-tax-banner">
-        SOS tax
-    </header>
+    <div class="sos-tax-banner">
+        SOS Tax - Belastingaangifte Calculator
+    </div>
     <div class="main-container">
         <div class="info-banner">
             Dit is een simulator, die toelaat anoniem uw belastingsaanslag te berekenen. De gegevens worden niet bijgehouden en de aangifte kan niet ingediend worden.
@@ -397,6 +398,9 @@
         
         
             </tbody></table><input type="hidden" name="formComplete" id="formComplete"></div></div>
+            <input type="checkbox" name="check_c01_h" value="checked" onclick="coupleNoCouple(document.forms['cadreform'])" id="check_c01_h">
+            De aangifte gaat over echtgenoten of wettelijk samenwonenden (Situatie op 1 januari 2024)
+            <input type="text" name="text_c02_c" maxlength="10" size="11" value="" disabled="disabled">
         </form>
         
         

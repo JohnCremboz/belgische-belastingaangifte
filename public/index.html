@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belastingaangifte Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/open-dyslexic">
     <style>
         body {
             margin: 0;
@@ -88,6 +89,9 @@
     </style>
 </head>
 <body>
+    <div class="sos-tax-banner">
+        SOS Tax - Belastingaangifte Calculator
+    </div>
     <div class="main-container">
         <div class="info-banner">
             Dit is een simulator, die toelaat anoniem uw belastingsaanslag te berekenen. De gegevens worden niet bijgehouden en de aangifte kan niet ingediend worden.
@@ -145,8 +149,7 @@
     </div>
     <!-- ...existing code... -->
 
-
-
+<script src="js/coupleNoCouple.js"></script>
 <script src="https://ccff02.minfin.fgov.be/https://ccff02.minfin.fgov.be/taxcalc2024/static/js/hashtable.js"></script>
 <script src="https://ccff02.minfin.fgov.be/https://ccff02.minfin.fgov.be/taxcalc2024/static/js/postCode.js"></script>
 <script>
@@ -324,7 +327,7 @@ writeErrorCount('','errorcount');
     
         <div class="container" style="text-align: right;padding-top: 20px;">
             <button type="button" id="NEXT_CADRE" class="btn btn-fin01"
-                    onclick="javascript:submitForm(document.forms.cadreform,'https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/private/taxform/validateCadreI.do')">
+                    onclick="submitForm(document.forms['cadreform'], document.forms['cadreform'].action)">
                 Naar het volgend vak
             </button>
         </div>

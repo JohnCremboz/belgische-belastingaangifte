@@ -194,6 +194,7 @@
             }
         }
     </style>
+    <script src="js/coupleNoCouple.js"></script>
 </head>
 <body>
     <header class="sos-tax-banner">
@@ -334,17 +335,17 @@
         
         
         
-        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >gewone:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1242"><b>1<span style="color:#C60C08">242</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1242" maxlength="11" value="" id="text_c1242" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2242" value=""/></td></tr>
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >gewone:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1242"><b>1<span style="color:#C60C08">242</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1242" maxlength="11" value="" id="text_c1242" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2242" value=""/></td></tr>
         
         
         
-        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">b)</td><td style="vertical-align:top;" >achterstallen:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1243"><b>1<span style="color:#C60C08">243</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1243" maxlength="11" value="" id="text_c1243" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2243" value=""/></td></tr>
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">b)</td><td style="vertical-align:top;" >achterstallen:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1243"><b>1<span style="color:#C60C08">243</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1243" maxlength="11" value="" id="text_c1243" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2243" value=""/></td></tr>
         
         
         <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=IV&contentkey=application_help_0101_1#anchor_A_9');"><img src="https://ccff02.minfin.fgov.be/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>9.</b></td><td style="vertical-align:top;" ><b>Werkgeverstussenkomsten in een privé-pc:</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
         
         
-        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >totale bedrag van de tussenkomsten:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1240"><b>1<span style="color:#C60C08">240</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1240" maxlength="11" value="" id="text_c1240" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2240" value=""/></td></tr>
+        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >totale bedrag van de tussenkomsten:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1240"><b>1<span style="color:#C60C08">240</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1240" maxlength="11" value="" id="text_c1240" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2240" value=""/></td></tr>
         
         
         
@@ -979,6 +980,9 @@
         
         
             </tbody></table><input type="hidden" name="formComplete" id="formComplete"></div></div>
+            <input type="checkbox" name="check_c01_h" value="checked" onclick="coupleNoCouple(document.forms['cadreform'])" id="check_c01_h">
+            De aangifte gaat over echtgenoten of wettelijk samenwonenden (Situatie op 1 januari 2024)
+            <input type="text" name="text_c02_c" maxlength="10" size="11" value="" disabled="disabled">
         </form>
         
         
