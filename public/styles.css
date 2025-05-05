@@ -1,18 +1,23 @@
-// ...existing code...
+@import url('https://fonts.googleapis.com/css2?family=OpenDyslexic:wght@400&display=swap');
 body {
     font-family: 'OpenDyslexic', 'Segoe UI', Arial, sans-serif;
 }
-// ...existing code...
+.sos-tax-banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f4f8; /* Light background for contrast */
+}
 .sos-tax-banner {
-    background: linear-gradient(90deg, #0d47a1, #1976d2, #42a5f5);
-    color: #fff;
-    padding: 1.5rem 0;
+    background: linear-gradient(90deg, #0b3d91, #1565c0, #1e88e5); /* Adjusted colors for better contrast */
+    color: #ffffff; /* Ensure high contrast */
+    padding: 2rem 0; /* Increased padding for better spacing */
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.8rem; /* Slightly larger font size */
     font-family: 'OpenDyslexic', 'Segoe UI', Arial, sans-serif;
     font-weight: bold;
-    letter-spacing: 1.5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-bottom: 4px solid #1565c0;
+    letter-spacing: 1.8px; /* Slightly increased letter spacing */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Enhanced shadow for better visibility */
+    border-bottom: 5px solid #0d47a1; /* Slightly thicker border */
 }
-// ...existing code...

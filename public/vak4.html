@@ -274,24 +274,112 @@
         
         <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=IV&contentkey=application_help_0101_1#anchor_A_1');"><img src="https://ccff02.minfin.fgov.be/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>1.</b></td><td style="vertical-align:top;" ><b>Wedden, lonen, enz. (andere dan bedoeld in 14, a en 15, a):</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
         
-        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >volgens fiches 281.10 :</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c250b_1"><span style="color:#C60C08">250</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c250b_1" maxlength="11" value="" onblur="calculateTotal1250(this.form,3);" id="text_c250b_1" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2250" value=""/></td></tr><tr ><td colspan="2"></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c250b_2"><span style="color:#C60C08">250</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c250b_2" maxlength="11" value="" onblur="calculateTotal1250(this.form,3);" id="text_c250b_2" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2250" value=""/></td></tr><tr ><td colspan="2"></td><td class="grey"></td><td style="text-align:center;padding:10px;"><b><label for="text_c250b_3"><span style="color:#C60C08">250</span></label></b></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c250b_3" maxlength="11" value="" onblur="calculateTotal1250(this.form,3);" id="text_c250b_3" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2250" value=""/></td></tr>
-        <tr><td colspan="2"></td><td class="grey"></td><td colspan="2" style="text-align:center"><a href="javascript:submitForm(cadreform,'https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/private/taxform/increaseCounter1CadreIV.do?cadreAnchor=counter1')">Een lijn toevoegen</a></td><td class="grey"></td><td colspan="2"></td></tr>
-        
-        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;padding-right:5px;">b)</td><td style="vertical-align:top;" >die niet op een fiche 281.10 zijn vermeld:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1250"><b></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_D210" maxlength="11" value="" onblur="calculateTotal1250(this.form,3);" id="text_D210" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2250" value=""/></td></tr>
-        <tr><td colspan="2"></td><td class="grey"></td><td colspan="2"><hr class="fin-dark" style="width: 95%"/></td><td class="grey"></td><td colspan="2"></td></tr>
-        
-        
-        
-        
-        <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=IV&contentkey=application_help_0101_1#anchor_A_1');"><img src="https://ccff02.minfin.fgov.be/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"><b>2.</b></td><td style="vertical-align:top;" ><b>Totaal van de rubrieken 1, a en 1, b:</b></td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1250"><b>1250</b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1250" maxlength="11" value="" onfocus="calculateTotal1250(this.form,3);" readonly="readonly" id="text_c1250" style="width:95px"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2250" value=""/></td></tr>
-        
-        
+        <tr>
+    <td style="padding-left:30px;padding-top:5px;padding-bottom:5px;">
+        <table>
+            <tr>
+                <td style="vertical-align:top;padding-right:5px;"></td>
+                <td style="vertical-align:top;">a)</td>
+                <td style="vertical-align:top;">volgens fiches 281.10:</td>
+            </tr>
+        </table>
+    </td>
+    <td></td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <b><label for="text_c250b_1"><span style="color:#C60C08">250</span></label></b>
+    </td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c250b_1" maxlength="11" value="" onblur="calculateTotal1250(this.form,3);" id="text_c250b_1" style="width:95px">
+    </td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c250b_1_spouse" maxlength="11" value="" disabled="disabled" id="text_c250b_1_spouse" style="width:95px">
+    </td>
+</tr>
+<tr>
+    <td colspan="2"></td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <b><label for="text_c250b_2"><span style="color:#C60C08">250</span></label></b>
+    </td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c250b_2" maxlength="11" value="" onblur="calculateTotal1250(this.form,3);" id="text_c250b_2" style="width:95px">
+    </td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c250b_2_spouse" maxlength="11" value="" disabled="disabled" id="text_c250b_2_spouse" style="width:95px">
+    </td>
+</tr>
+<tr>
+    <td colspan="2"></td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <b><label for="text_c250b_3"><span style="color:#C60C08">250</span></label></b>
+    </td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c250b_3" maxlength="11" value="" onblur="calculateTotal1250(this.form,3);" id="text_c250b_3" style="width:95px">
+    </td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c250b_3_spouse" maxlength="11" value="" disabled="disabled" id="text_c250b_3_spouse" style="width:95px">
+    </td>
+</tr>
+<tr><td colspan="2"></td><td class="grey"></td><td colspan="2" style="text-align:center"><a href="javascript:submitForm(cadreform,'https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/private/taxform/increaseCounter1CadreIV.do?cadreAnchor=counter1')">Een lijn toevoegen</a></td><td class="grey"></td><td colspan="2"></td></tr>
         
         <tr>
-            <td colspan="8">
-                <a id="counter6"></a>
-            </td>
-        </tr>
+    <td style="padding-left:30px;padding-top:5px;padding-bottom:5px;">
+        <table>
+            <tr>
+                <td style="vertical-align:top;padding-right:5px;">b)</td>
+                <td style="vertical-align:top;">die niet op een fiche 281.10 zijn vermeld:</td>
+            </tr>
+        </table>
+    </td>
+    <td></td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <label for="text_c1250"><b></b></label>
+    </td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_D210" maxlength="11" value="" onblur="calculateTotal1250(this.form,3);" id="text_D210" style="width:95px">
+    </td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_D210_spouse" maxlength="11" value="" disabled="disabled" id="text_D210_spouse" style="width:95px">
+    </td>
+</tr>
+<tr>
+    <td colspan="2"></td>
+    <td class="grey"></td>
+    <td colspan="2">
+        <hr class="fin-dark" style="width: 95%">
+    </td>
+    <td class="grey"></td>
+    <td colspan="2"></td>
+</tr>
+<tr>
+    <td style="padding-left:15px;padding-top:5px;padding-bottom:5px;">
+        <table>
+            <tr>
+                <td style="vertical-align:top;padding-right:5px;"><b>2.</b></td>
+                <td style="vertical-align:top;"><b>Totaal van de rubrieken 1, a en 1, b:</b></td>
+            </tr>
+        </table>
+    </td>
+    <td></td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <label for="text_c1250"><b>1250</b></label>
+    </td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c1250" maxlength="11" value="" onfocus="calculateTotal1250(this.form,3);" readonly="readonly" id="text_c1250" style="width:95px">
+    </td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c1250_spouse" maxlength="11" value="" disabled="disabled" id="text_c1250_spouse" style="width:95px">
+    </td>
+</tr>
         
         <tr ><td style="padding-left:15px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=IV&contentkey=application_help_0101_1#anchor_A_3');"><img src="https://ccff02.minfin.fgov.be/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"><b>3.</b></td><td style="vertical-align:top;" ><b>Vervroegd vakantiegeld (ander dan bedoeld in 14, b en 15, b):</b></td></tr></table></td><td></td><td class="grey"></td><td colspan="2"></td><td class="grey"></td><td colspan="2"></td></tr>
         
@@ -318,7 +406,50 @@
         
         
         
-        <tr ><td style="padding-left:30px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"></td><td style="vertical-align:top;padding-right:5px;">a)</td><td style="vertical-align:top;" >totaal bedrag:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1254"><b>1<span style="color:#C60C08">254</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1254" maxlength="11" value="" id="text_c1254" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2254" value=""/></td></tr>
+        <tr >
+    <td style="padding-left:30px;padding-top:5px;padding-bottom:5px;">
+        <table>
+            <tr>
+                <td style="vertical-align:top;padding-right:5px;">a)</td>
+                <td style="vertical-align:top;" >totaal bedrag:</td>
+            </tr>
+        </table>
+    </td>
+    <td></td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <label for="text_c1254"><b>1<span style="color:#C60C08">254</span></b></label>
+    </td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c1254" maxlength="11" value="" id="text_c1254" style="width:95px" class="input-value">
+    </td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c1254_spouse" maxlength="11" value="" disabled="disabled" id="text_c1254_spouse" style="width:95px">
+    </td>
+</tr>
+<tr >
+    <td style="padding-left:30px;padding-top:5px;padding-bottom:5px;">
+        <table>
+            <tr>
+                <td style="vertical-align:top;padding-right:5px;">b)</td>
+                <td style="vertical-align:top;" >vrijstelling:</td>
+            </tr>
+        </table>
+    </td>
+    <td></td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <label for="text_c1255"><b>1255</b></label>
+    </td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c1255" maxlength="11" value="" id="text_c1255" style="width:95px" class="input-value">
+    </td>
+    <td class="grey"></td>
+    <td style="text-align:center;padding:10px;">
+        <input type="text" name="text_c1255_spouse" maxlength="11" value="" disabled="disabled" id="text_c1255_spouse" style="width:95px">
+    </td>
+</tr>
         
         
         
@@ -779,7 +910,7 @@
         
         
         
-        <tr ><td style="padding-left:0px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=IV&contentkey=application_help_0101_1#anchor_I');"><img src="https://ccff02.minfin.fgov.be/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;position:absolute;margin-left:-30px;"></td><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" class="datetaxbox">I. INHOUDINGEN VOOR DE BIJZONDERE BIJDRAGE VOOR DE SOCIALE ZEKERHEID:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1287"><b>1<span style="color:#C60C08">287</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1287" maxlength="11" value="" id="text_c1287" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2287" value=""/></td></tr>
+        <tr ><td style="padding-left:0px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=IV&contentkey=application_help_0101_1#anchor_I');"><img src="https://ccff02.minfin.fgov.be/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" class="datetaxbox">I. INHOUDINGEN VOOR DE BIJZONDERE BIJDRAGE VOOR DE SOCIALE ZEKERHEID:</td></tr></table></td><td></td><td class="grey"></td><td style="text-align:center;padding:10px;"><label for="text_c1287"><b>1<span style="color:#C60C08">287</span></b></label></td><td style="text-align:center;padding:10px;"><input type="text" name="text_c1287" maxlength="11" value="" id="text_c1287" style="width:95px" class="input-value"></td><td class="grey"></td><td colspan="2"><input type="hidden" name="text_c2287" value=""/></td></tr>
         
         
                 
@@ -793,7 +924,7 @@
         
         
         
-        <tr ><td style="padding-left:0px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=IV&contentkey=application_help_0101_1#anchor_J');"><img src="https://ccff02.minfin.fgov.be/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" class="datetaxbox">J. OVERHEIDSPERSONEEL ZONDER ARBEIDSOVEREENKOMST:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"><table><tr><td style="text-align:center;padding:10px;"><b>1<span style="color:#C60C08">290</span></b></td><td style="text-align:center;padding:10px;"><input type="checkbox" name="check_c1290" value="checked" id="check_c1290"></td><td style="text-align:center;padding:10px;">Ja</td></tr></table></td><td class="grey"></td><td colspan="2"><input type="hidden" name="check_c2290" value=""/></td></tr>
+        <tr ><td style="padding-left:0px;padding-top:5px;padding-bottom:5px;"><table><tr><td style="vertical-align:top;position:absolute;margin-left:-15px;"><a href="javascript:newDefaultWindow('https://ccff02.minfin.fgov.be/taxcalc2024/app/anonymous/public/taxform/bookHelp.do?cadre=IV&contentkey=application_help_0101_1#anchor_J');"><img src="https://ccff02.minfin.fgov.be/taxcalc2024/static/images/icon_info.gif" class="icon_wizard" title="Fiscale toelichting" alt="Fiscale toelichting"></a></td><td style="vertical-align:top;padding-right:5px;"></td><td style="vertical-align:top;" class="datetaxbox">J. OVERHEIDSPERSONEEL ZONDER ARBEIDSOVEREENKOMST:</td></tr></table></td><td></td><td class="grey"></td><td colspan="2"><table><tr><td style="text-align:center;padding:10px;"><b>1<span style="color:#C60C08">290</span></td><td style="text-align:center;padding:10px;"><input type="checkbox" name="check_c1290" value="checked" id="check_c1290"></td><td style="text-align:center;padding:10px;">Ja</td></tr></table></td><td class="grey"></td><td colspan="2"><input type="hidden" name="check_c2290" value=""/></td></tr>
         
         
                 
